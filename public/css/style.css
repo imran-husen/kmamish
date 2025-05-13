@@ -102,10 +102,8 @@ body{
 
 
 /*..........................Here write the code for next section.......................... */
-<style>
 .custom-footer {
-  background-color: #222;
-  color: #fff;
+  color: #3b0404;
   padding: 40px 0;
   font-family: Arial, sans-serif;
   font-size: 15px;
@@ -179,5 +177,4 @@ body{
 .custom-footer .social-icons i:hover {
   color: #0d6efd;
 }
-</style>
 

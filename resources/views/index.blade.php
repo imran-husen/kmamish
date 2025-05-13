@@ -25,10 +25,10 @@
     
     <!-- Social Media Icons -->
     <div class="mb-2 d-flex justify-content-center justify-content-sm-end flex-wrap">
-      <a href="" target="_blank" class="me-2 text-dark"><i class="fab fa-twitter"></i></a>
-      <a href="" target="_blank" class="me-2 text-dark"><i class="fab fa-facebook"></i></a>
-      <a href="#" target="_blank" class="me-2 text-dark"><i class="fab fa-instagram"></i></a>
-      <a href="" target="_blank" class="me-2 text-dark"><i class="fab fa-youtube"></i></a>
+      <a href="https://x.com/Multidi43528293?t=JypRJGi49eLtKGqc3uT9TQ&s=09" target="_blank" class="me-2 text-dark"><i class="fab fa-twitter"></i></a>
+      <a href="https://www.facebook.com/share/19UC62ADpK/" target="_blank" class="me-2 text-dark"><i class="fab fa-facebook"></i></a>
+      <a href="https://www.instagram.com/multidimensional_party?igsh=MXM2emg2dGQ2Ync0bQ==  " target="_blank" class="me-2 text-dark"><i class="fab fa-instagram"></i></a>
+      <a href="https://youtube.com/@multidimensionaleducationa4295?feature=shared" target="_blank" class="me-2 text-dark"><i class="fab fa-youtube"></i></a>
       <a href="" target="_blank" class="text-dark"><i class="fab fa-google-plus-g"></i></a>
     </div>
 
@@ -93,7 +93,7 @@
           <a href="https://x.com/Multidi43528293?t=JypRJGi49eLtKGqc3uT9TQ&s=09" target="_blank" class="btn btn-outline-info rounded-pill px-4 py-2 shadow-sm d-flex align-items-center">
             <i class="fab fa-twitter me-2"></i>Twitter
           </a>
-          <a href="https://www.linkedin.com/in/k-m-amish-president-of-ngo-and-bahuayami-political-party-35a03598" target="_blank" class="btn btn-outline-dark rounded-pill px-4 py-2 shadow-sm d-flex align-items-center">
+          <a href="https://www.linkedin.com/in/k-m-amish-president-of-ngo-and-bahuayami-political-party-35a03598?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" class="btn btn-outline-dark rounded-pill px-4 py-2 shadow-sm d-flex align-items-center">
             <i class="fab fa-linkedin-in me-2"></i>LinkedIn
           </a>
         </div>
@@ -184,13 +184,13 @@
         <div class="scroll-box">
           <div class="scroll-content">
             <div class="mb-3">
-              <iframe width="100%" height="180" src="https://www.youtube.com/embed/QTSxL27GzqA" allowfullscreen></iframe>
+              <iframe width="100%" height="180" src="https://www.youtube.com/embed/3LZRdV3GAGE" allowfullscreen></iframe>
             </div>
             <div class="mb-3">
-              <iframe width="100%" height="180" src="https://www.youtube.com/embed/sBws8MSXN7A" allowfullscreen></iframe>
+              <iframe width="100%" height="180" src="https://www.youtube.com/embed/5bDg8txbPBI" allowfullscreen></iframe>
             </div>
             <div class="mb-3">
-              <iframe width="100%" height="180" src="https://youtu.be/sgyYzqW0cVw?si=HQ0I6D5UkD9Zrtc9" allowfullscreen></iframe>
+              <iframe width="100%" height="180" src="https://www.youtube.com/embed/KWlIkm_8Te4" allowfullscreen></iframe>
             </div>
           </div>
         </div>
