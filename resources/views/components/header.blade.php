@@ -16,6 +16,7 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
+    
     <link rel="stylesheet" href="css/style.css">
     <link rel="icon" type="image/x-icon" href="image/main logo.png" style="border-radius:100%">
     
@@ -97,27 +98,54 @@
 {{$bodycode}}
 
 <hr>
-<footer class="py-1">
-    <div class="container">
-        <div class="row align-items-center">
 
-            <!-- Quick Links (Center) -->
-            <div class="col-md-12 text-center">
-                <a href="#" class=" text-decoration-none me-3">Home</a>
-                <a href="#" class=" text-decoration-none me-3">About</a>
-                <a href="#" class=" text-decoration-none me-3">Help</a>
-                <a href="#" class=" text-decoration-none">Contact</a>
-            </div>
+<footer class="custom-footer" style="font-family: Merriweather, serif;">
+  <div class="container">
+    <div class="footer-row">
+      <!-- Menu Section -->
+      <div class="footer-col">
+        <h5>Menu</h5>
+        <div class="menu-columns">
+          <ul>
+            <li>My Thoughts</li>
+            <li>My Vision</li>
+            <li>My Journey</li>
+          </ul>
+          <ul>
+            <li>Videos</li>
+            <li>News</li>
+            <li>Get in Touch</li>
+          </ul>
         </div>
 
-        <!-- Copyright -->
-        <div class="text-center mt-3 fw-bold">
-            <p class="mb-8">&copy; 2025 <kmamish class="info"></kmamish> All rights reserved to kmamish.info</p>
-        </div>
+        <!-- Newsletter -->
+        <h5 class="newsletter-title">Newsletter</h5>
+        <form class="newsletter-form">
+          <input type="email" placeholder="Enter your email" />
+          <button type="submit">Subscribe</button>
+        </form>
+      </div>
 
-        <div class="col-md-12 text-center"  style="height:20px">
+      <!-- Contact Info & Social -->
+      <div class="footer-col address">
+        <h5>Address</h5>
+        <p>A-44 Kailash Colony</p>
+        <p>New Delhi - 110048</p>
+        <p>Contact: 011-29248212, 011-29244587</p>
+        <p>Email: office@arunjaitley.com</p>
+
+        <div class="social-icons">
+          <i class="fab fa-twitter"></i>
+          <i class="fab fa-instagram"></i>
+          <i class="fab fa-facebook-f"></i>
+          <i class="fab fa-youtube"></i>
+          <i class="fab fa-google-plus-g"></i>
+        </div>
+      </div>
     </div>
+  </div>
 </footer>
+
 
 <!-- Here i am add the canvas library -->
  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>

@@ -148,8 +148,17 @@
               <div class="card news-card">
                 <img src="{{ asset('/image/slider 3.png')}}" class="card-img-top" alt="...">
                 <div class="card-body">
-                  <h5 class="card-title">News Title 1</h5>
-                  <p class="card-text">Short description for news article 1.</p>
+                  <h5 class="card-title text-center">News Title 1</h5>
+                  <p class="card-text text-center">Short description for news article 1.</p>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="card news-card">
+                <img src="{{ asset('/image/slider 3.png')}}" class="card-img-top" alt="...">
+                <div class="card-body ">
+                  <h5 class="card-title text-center">News Title 2</h5>
+                  <p class="card-text text-center">Short description for news article 2.</p>
                 </div>
               </div>
             </div>
@@ -157,17 +166,8 @@
               <div class="card news-card">
                 <img src="{{ asset('/image/slider 3.png')}}" class="card-img-top" alt="...">
                 <div class="card-body">
-                  <h5 class="card-title">News Title 2</h5>
-                  <p class="card-text">Short description for news article 2.</p>
-                </div>
-              </div>
-            </div>
-            <div class="carousel-item">
-              <div class="card news-card">
-                <img src="{{ asset('/image/slider 3.png')}}" class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title">News Title 3</h5>
-                  <p class="card-text">Short description for news article 3.</p>
+                  <h5 class="card-title text-center">News Title 3</h5>
+                  <p class="card-text text-center">Short description for news article 3.</p>
                 </div>
               </div>
             </div>
@@ -180,7 +180,7 @@
     <!-- Right: YouTube Videos -->
     <div class="col-lg-3">
       <div class="youtube-box">
-        <h5 class="text-center mb-3">YouTube Videos</h5>
+        <h5 class="text-center mb-3 fw-bold text-danger">YouTube Videos</h5>
         <div class="scroll-box">
           <div class="scroll-content">
             <div class="mb-3">

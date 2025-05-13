@@ -102,3 +102,82 @@ body{
 
 
 /*..........................Here write the code for next section.......................... */
+<style>
+.custom-footer {
+  background-color: #222;
+  color: #fff;
+  padding: 40px 0;
+  font-family: Arial, sans-serif;
+  font-size: 15px;
+}
+.custom-footer .footer-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.custom-footer .footer-col {
+  flex: 1 1 100%;
+  max-width: 100%;
+  margin-bottom: 30px;
+}
+@media (min-width: 768px) {
+  .custom-footer .footer-col {
+    flex: 0 0 48%;
+    max-width: 48%;
+  }
+}
+.custom-footer h5 {
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+.custom-footer ul {
+  list-style: none;
+  padding: 0;
+}
+.custom-footer ul li {
+  margin-bottom: 8px;
+}
+.custom-footer .menu-columns {
+  display: flex;
+  justify-content: space-between;
+}
+.custom-footer .menu-columns ul {
+  flex: 1;
+  padding-right: 15px;
+}
+.custom-footer .newsletter-form {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+.custom-footer .newsletter-form input {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  border-radius: 3px;
+}
+.custom-footer .newsletter-form button {
+  padding: 10px 20px;
+  border: none;
+  background-color: #007bff;
+  color: #fff;
+  border-radius: 3px;
+  cursor: pointer;
+}
+.custom-footer .newsletter-form button:hover {
+  background-color: #0056b3;
+}
+.custom-footer .social-icons {
+  margin-top: 15px;
+}
+.custom-footer .social-icons i {
+  font-size: 20px;
+  margin-right: 10px;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+.custom-footer .social-icons i:hover {
+  color: #0d6efd;
+}
+</style>
+
