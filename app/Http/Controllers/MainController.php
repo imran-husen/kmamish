@@ -10,4 +10,24 @@ class MainController extends Controller
     public function test(){
         return view('test');
     }
+
+    //This is the routings of the education life
+    public function education(){
+        return view('education');
+    }
+
+    // This is the rouyting of the write life
+    public function writter(){
+        return view('writter');
+    }
+
+    // This is the roting of the social life
+    public function social(){
+        return view('social');
+    }
+
+    // This is the routing of the polotical page
+    public function polotical(){
+        return view('polotical');
+    }
 }

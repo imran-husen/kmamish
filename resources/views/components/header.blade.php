@@ -37,7 +37,7 @@
         </button>
 
         <!-- Profile Icon (Right Corner) -->
-        <a href="{{ url('/register')}}" class="d-flex align-items-center">
+        <a href="{{ url('/admin/login')}}" class="d-flex align-items-center">
                 <img src="{{asset('/image/main logo.png')}}" alt="User Profile" class="profile-icon">
             </a>
 
@@ -54,10 +54,10 @@
                         About-us
                     </a>
                     <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="{{ url('/register')}}">Education Life</a></li>
-                        <li><a class="dropdown-item" href="{{url('/login')}}">Writter Life</a></li>
-                        <li><a class="dropdown-item" href="{{ url('/dashboard')}}">Social Life</a></li>
-                        <li><a class="dropdown-item" href="{{ url('/dashboard')}}">Polotical Life</a></li>
+                        <li><a class="dropdown-item" href="{{ url('/Educational-life')}}">Education Life</a></li>
+                        <li><a class="dropdown-item" href="{{url('/Writter-life')}}">Writter Life</a></li>
+                        <li><a class="dropdown-item" href="{{ url('/Social-life')}}">Social Life</a></li>
+                        <li><a class="dropdown-item" href="{{ url('/Polotical-life')}}">Polotical Life</a></li>
                     </ul>
                 </li>
 
@@ -98,7 +98,6 @@
 {{$bodycode}}
 
 <hr>
-
 <footer class="custom-footer" style="font-family: Merriweather, serif;">
   <div class="container">
     <div class="footer-row">
@@ -145,11 +144,19 @@
     </div>
   </div>
 </footer>
+ <footer class="bg-dark text-white text-center py-2">
+  <p>&copy; 2025 All rights reserved by kmamish.info</p>
+</footer>
 
 
 <!-- Here i am add the canvas library -->
  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-
+<script>
+  AOS.init({
+    duration: 1000,
+    once: true
+  });
+</script>
 </body>
 </html>

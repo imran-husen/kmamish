@@ -178,3 +178,80 @@ body{
   color: #0d6efd;
 }
 
+
+    /* ...................Here i am writing the code of the writter page......................... */
+    .journey-section {
+      padding: 80px 0;
+    }
+    .stage-card {
+      background: white;
+      border-left: 5px solid #0d6efd;
+      padding: 30px;
+      margin-bottom: 15px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.05);
+    }
+    .stage-icon {
+      font-size: 2.5rem;
+      color: #0d6efd;
+    }
+    .stage-title {
+      margin-top: 15px;
+      font-weight: bold;
+    }
+
+/*...........................This is the code of the social life......................... */
+.hero {
+      background: linear-gradient(135deg, #0d6efd, #6f42c1);
+      color: white;
+      padding: 80px 20px;
+    }
+    .section-title {
+      margin-bottom: 40px;
+      font-weight: bold;
+    }
+    .social-card {
+      transition: transform 0.3s, box-shadow 0.3s;
+      background-color: white;
+      border: none;
+      border-radius: 12px;
+    }
+    .social-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    }
+    .icon-box {
+      font-size: 2rem;
+      color: #0d6efd;
+      margin-bottom: 10px;
+    }
+
+
+/* .........................Plotical Page................................. */
+
+
+    .hero {
+      background: linear-gradient(135deg, #198754, #0d6efd);
+      color: white;
+      padding: 80px 20px;
+      text-align: center;
+    }
+    .section-title {
+      margin-bottom: 40px;
+      font-weight: bold;
+    }
+    .card-politic {
+      background: white;
+      border-left: 5px solid #198754;
+      padding: 25px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.05);
+      transition: transform 0.3s;
+      height: 100%;
+    }
+    .card-politic:hover {
+      transform: translateY(-5px);
+    }
+    .icon-box {
+      font-size: 2.5rem;
+      color: #0d6efd;
+      margin-bottom: 15px;
+    }
