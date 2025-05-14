@@ -128,10 +128,10 @@
       <!-- Contact Info & Social -->
       <div class="footer-col address">
         <h5>Address</h5>
-        <p>A-44 Kailash Colony</p>
-        <p>New Delhi - 110048</p>
-        <p>Contact: 011-29248212, 011-29244587</p>
-        <p>Email: office@arunjaitley.com</p>
+        <p>Location: Uttar Pradesh Capital – Lucknow</p>
+        <p>Birth Place: H No. 116, Hargaon Road, Usari Piperjhala</p>
+        <p>Contact: 0522-2731211, +91 9918422098</p>
+        <p>Email: president@bahuayamiparty.in</p>
 
         <div class="social-icons">
           <i class="fab fa-twitter"></i>

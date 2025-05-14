@@ -1,7 +1,7 @@
 body{
     font-family: "Arima", system-ui;
     font-size:15px;
-    background-color: rgb(203, 131, 208);
+    background-color: rgb(204, 158, 207);
 }
 
 .navbar-brand img {
@@ -101,7 +101,7 @@ body{
 }
 
 
-/*..........................Here write the code for next section.......................... */
+/*..........................Here write the code for footer section.......................... */
 .custom-footer {
   color: #3b0404;
   padding: 40px 0;
@@ -177,6 +177,29 @@ body{
 .custom-footer .social-icons i:hover {
   color: #0d6efd;
 }
+
+/* code of the fedback and contact us form */
+
+    .form-box {
+      background: white;
+      border-radius: 15px;
+      padding: 30px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      margin-bottom: 20px;
+    }
+    h3 {
+      color: #007BFF;
+      font-weight: bold;
+    }
+    .btn-primary, .btn-success {
+      width: 100%;
+      font-weight: bold;
+    }
+    @media (max-width: 768px) {
+      .form-box {
+        margin-top: 20px;
+      }
+    }
 
 
     /* ...................Here i am writing the code of the writter page......................... */

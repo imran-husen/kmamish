@@ -47,13 +47,13 @@
        <div id="carouselExampleAutoplaying" class="carousel slide my-0 d-block d-lg-none" data-bs-ride="carousel">
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <img src="{{ asset('/image/slider 3.png')}}" class="d-block w-100" alt="...">
+      <img src="{{ asset('/image/slider-1.png')}}" class="d-block w-100" alt="...">
     </div>
     <div class="carousel-item">
-      <img src="{{ asset('/image/slider 1.png')}}" class="d-block w-100" alt="...">
+      <img src="{{ asset('/image/slider-2.png')}}" class="d-block w-100" alt="...">
 </div>
     <div class="carousel-item">
-      <img src="{{ asset('/image/slider 1.png')}}" class="d-block w-100" alt="...">
+      <img src="{{ asset('/image/slider-3.png')}}" class="d-block w-100" alt="...">
     </div>
   </div>
   <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
@@ -194,6 +194,69 @@
             </div>
           </div>
         </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Here i am write the code for the contactus -->
+ <div class="container my-2">
+  <div class="row justify-content-center">
+    <div class="col-10 text-center">
+      <h4 class="fw-bold text-primary">Join with us or give the feedback for me</h4>
+      <p class="lead mt-2 text-dark fs-6">
+           By using the below form you can easly join with me. If you want provide some feedback for me you can easly send with bt by using the given below form.
+      </p>
+    </div>
+  </div>
+</div>
+ <div class="container">
+  <div class="row">
+    <!-- Join Us Form -->
+    <div class="col-md-6">
+      <div class="form-box">
+        <h3 class="text-center mb-4">Join Us With Me</h3>
+        <form>
+          <div class="mb-3">
+            <label for="joinName" class="form-label">Full Name</label>
+            <input type="text" class="form-control" id="joinName" placeholder="Enter your full name" required>
+          </div>
+          <div class="mb-3">
+            <label for="joinEmail" class="form-label">Email address</label>
+            <input type="email" class="form-control" id="joinEmail" placeholder="Enter your email" required>
+          </div>
+          <div class="mb-3">
+            <label for="joinPhone" class="form-label">Phone Number</label>
+            <input type="tel" class="form-control" id="joinPhone" placeholder="Enter your phone number" required>
+          </div>
+          <div class="mb-3">
+            <label for="joinInterest" class="form-label">Why do you want to join?</label>
+            <textarea class="form-control" id="joinInterest" rows="3" placeholder="Your reason or motivation..." required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary">Join Now</button>
+        </form>
+      </div>
+    </div>
+
+    <!-- Feedback Form -->
+    <div class="col-md-6">
+      <div class="form-box">
+        <h3 class="text-center mb-4">Give Us Your Feedback</h3>
+        <form>
+          <div class="mb-3">
+            <label for="fbName" class="form-label">Name</label>
+            <input type="text" class="form-control" id="fbName" placeholder="Your name" required>
+          </div>
+          <div class="mb-3">
+            <label for="fbPhone" class="form-label">Phone Number</label>
+            <input type="tel" class="form-control" id="fbPhone" placeholder="Your phone number" required>
+          </div>
+          <div class="mb-3">
+            <label for="fbMessage" class="form-label">Your Feedback</label>
+            <textarea class="form-control" id="fbMessage" rows="4" placeholder="Share your thoughts..." required></textarea>
+          </div>
+          <button type="submit" class="btn btn-success">Submit Feedback</button>
+        </form>
       </div>
     </div>
   </div>

@@ -21,7 +21,7 @@
           <div class="card-body">
             <div class="edu-icon mb-2">🏫</div>
             <h5 class="card-title">Primary Education</h5>
-            <p class="card-text">Basic foundational learning in reading, writing, and arithmetic. Introduction to school environment and teamwork.</p>
+            <p class="card-text">"Started from a rural government school, building strong educational roots through dedication, discipline, and early excellence."</p>
           </div>
         </div>
       </div>
@@ -32,7 +32,7 @@
           <div class="card-body">
             <div class="edu-icon mb-2">📘</div>
             <h5 class="card-title">Secondary Education</h5>
-            <p class="card-text">Focused learning in science, mathematics, and languages. Participation in labs, sports, and early computer education.</p>
+            <p class="card-text">"Excelled in science and academics during high school, laying the foundation for a future in research."</p>
           </div>
         </div>
       </div>
@@ -43,7 +43,7 @@
           <div class="card-body">
             <div class="edu-icon mb-2">🎓</div>
             <h5 class="card-title">Higher Secondary</h5>
-            <p class="card-text">In-depth subjects like Physics, Chemistry, Biology, Mathematics or Commerce/Arts stream. Career foundation phase.</p>
+            <p class="card-text">"Strengthened academic focus in physics and chemistry, igniting a passion for scientific inquiry and national service."</p>
           </div>
         </div>
       </div>
@@ -65,7 +65,7 @@
           <div class="card-body">
             <div class="edu-icon mb-2">📚</div>
             <h5 class="card-title">Postgraduate / Master’s Degree</h5>
-            <p class="card-text">Advanced learning in specialized fields like AI, Web Development, Cybersecurity. Thesis or project work included.</p>
+            <p class="card-text">"Post-graduated in Physical Chemistry as a college topper, advancing toward specialized scientific research excellence."</p>
           </div>
         </div>
       </div>
@@ -76,7 +76,7 @@
           <div class="card-body">
             <div class="edu-icon mb-2">🔬</div>
             <h5 class="card-title">Research and Innovation</h5>
-            <p class="card-text">Academic research in chosen domain. Publications, experimental work, and contribution to open-source or academic knowledge.</p>
+            <p class="card-text">"Pioneered research in nanochemistry, publishing work on nanoparticles and nanotubes with national scientific recognition."</p>
           </div>
         </div>
       </div>
