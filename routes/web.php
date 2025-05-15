@@ -16,3 +16,15 @@ Route::get('/Polotical-life', [MainController::class, 'polotical']);
 
 
 
+// Here i am create routes of the admin panels
+Route::get('/Admin-Login', [AdminController::class, 'login']);
+
+// Show the login form (GET request)
+Route::get('/Dashbord-Admin-Panels', [AdminController::class, 'dashboard'])->name('Dashboard_Admin');
+
+// Handle login submission (POST request)
+Route::post('/Dashbord-Admin-Panels', [AdminController::class, 'dashboard']);
+
+
+
+

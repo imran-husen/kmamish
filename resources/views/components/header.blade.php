@@ -37,7 +37,7 @@
         </button>
 
         <!-- Profile Icon (Right Corner) -->
-        <a href="{{ url('/admin/login')}}" class="d-flex align-items-center">
+        <a href="{{ url('/Admin-Login')}}" class="d-flex align-items-center">
                 <img src="{{asset('/image/main logo.png')}}" alt="User Profile" class="profile-icon">
             </a>
 

@@ -25,7 +25,7 @@ body{
 /* ....................... Here the code latest news and youtube link ................................ */
 .card-container, .youtube-box {
   background-color: rgba(255, 255, 255, 0.1);
-  border-radius: 10px;
+ 
   padding: 20px;
 }
 
@@ -45,8 +45,7 @@ body{
   max-height: 250px; /* Limits image height */
   object-fit: cover; /* Ensures the image fills without distortion */
   display: block;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
+ 
 }
 /* Carousel and inner elements */
 .carousel-inner,
