@@ -216,25 +216,44 @@
     <div class="col-md-6">
       <div class="form-box">
         <h3 class="text-center mb-4">Join Us With Me</h3>
-        <form>
+                                    <!-- Display Validation Errors -->
+                    @if ($errors->any())
+                        <div class="alert alert-danger">
+                            <ul class="mb-0">
+                                @foreach ($errors->all() as $error)
+                                    <li>{{ $error }}</li>
+                                @endforeach
+                            </ul>
+                        </div>
+                    @endif
+
+                  <!-- Display Success Message -->
+                  @if (session('success'))                  
+                       <div class="alert alert-success">
+                          {{ session('success') }}
+                         </div>
+                  @endif
+        <form action="{{ route('join.store') }}" method="POST">
+              @csrf
+             <div class="mb-3">
+          <label for="joinName" class="form-label">Full Name</label>
+          <input type="text" class="form-control" id="joinName" name="name" placeholder="Enter your full name" required>
+            </div>
           <div class="mb-3">
-            <label for="joinName" class="form-label">Full Name</label>
-            <input type="text" class="form-control" id="joinName" placeholder="Enter your full name" required>
-          </div>
-          <div class="mb-3">
-            <label for="joinEmail" class="form-label">Email address</label>
-            <input type="email" class="form-control" id="joinEmail" placeholder="Enter your email" required>
-          </div>
-          <div class="mb-3">
-            <label for="joinPhone" class="form-label">Phone Number</label>
-            <input type="tel" class="form-control" id="joinPhone" placeholder="Enter your phone number" required>
-          </div>
-          <div class="mb-3">
-            <label for="joinInterest" class="form-label">Why do you want to join?</label>
-            <textarea class="form-control" id="joinInterest" rows="3" placeholder="Your reason or motivation..." required></textarea>
-          </div>
-          <button type="submit" class="btn btn-primary">Join Now</button>
-        </form>
+          <label for="joinEmail" class="form-label">Email address</label>
+          <input type="email" class="form-control" id="joinEmail" name="email" placeholder="Enter your email" required>
+         </div>
+        <div class="mb-3">
+        <label for="joinPhone" class="form-label">Phone Number</label>
+        <input type="tel" class="form-control" id="joinPhone" name="phone" placeholder="Enter your phone number" required>
+        </div>
+       <div class="mb-3">
+        <label for="joinInterest" class="form-label">Why do you want to join?</label>
+        <textarea class="form-control" id="joinInterest" name="interest" rows="3" placeholder="Your reason or motivation..." required></textarea>
+           </div>
+      <button type="submit" class="btn btn-primary">Join Now</button>
+      </form>
+
       </div>
     </div>
 

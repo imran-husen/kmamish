@@ -25,6 +25,9 @@ Route::get('/Dashbord-Admin-Panels', [AdminController::class, 'dashboard'])->nam
 // Handle login submission (POST request)
 Route::post('/Dashbord-Admin-Panels', [AdminController::class, 'dashboard']);
 
+// stored the data from home panels
+Route::post('/join', [AdminController::class, 'store'])->name('join.store');
+
 
 
 
