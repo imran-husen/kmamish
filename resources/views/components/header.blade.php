@@ -15,6 +15,8 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
     
     
     <link rel="stylesheet" href="css/style.css">
@@ -83,7 +85,7 @@
                     </ul>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ url('/About-us')}}">Join us</a>
+                    <a class="nav-link" href="{{ url('/Join-us')}}">Join us</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">Get in Touch</a>
@@ -97,55 +99,59 @@
 <!-- This is the body section of the page -->
 {{$bodycode}}
 
-<hr>
-<footer class="custom-footer" style="font-family: Merriweather, serif;">
-  <div class="container">
-    <div class="footer-row">
-      <!-- Menu Section -->
-      <div class="footer-col">
-        <h5>Menu</h5>
-        <div class="menu-columns">
-          <ul>
-            <li>My Thoughts</li>
-            <li>My Vision</li>
-            <li>My Journey</li>
-          </ul>
-          <ul>
-            <li>Videos</li>
-            <li>News</li>
-            <li>Get in Touch</li>
-          </ul>
-        </div>
+<footer class="text-white pt-5 pb-4">
+  <div class="container text-md-left">
+    <div class="row text-md-left">
 
-        <!-- Newsletter -->
-        <h5 class="newsletter-title">Newsletter</h5>
-        <form class="newsletter-form">
-          <input type="email" placeholder="Enter your email" />
-          <button type="submit">Subscribe</button>
+      <!-- Menu Section -->
+      <div class="col-md-3 col-lg-3 col-xl-3 mx-auto">
+        <h5 class="text-uppercase fw-bold mb-4">Menu</h5>
+        <ul class="list-unstyled">
+          <li><a href="#" class="text-decoration-none text-white-50 d-block mb-2">My Thoughts</a></li>
+          <li><a href="#" class="text-decoration-none text-white-50 d-block mb-2">My Vision</a></li>
+          <li><a href="#" class="text-decoration-none text-white-50 d-block mb-2">My Journey</a></li>
+          <li><a href="#" class="text-decoration-none text-white-50 d-block mb-2">Videos</a></li>
+          <li><a href="#" class="text-decoration-none text-white-50 d-block mb-2">News</a></li>
+          <li><a href="#" class="text-decoration-none text-white-50 d-block">Get in Touch</a></li>
+        </ul>
+      </div>
+
+      <!-- Newsletter Section -->
+      <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
+        <h5 class="text-uppercase fw-bold mb-1">Newsletter</h5>
+        <form class="d-flex flex-column">
+          <input type="email" class="form-control mb-2 rounded-3" placeholder="Enter your email" required>
+          <button class="btn btn-outline-light btn-sm rounded-3" type="submit">Subscribe</button>
         </form>
       </div>
 
-      <!-- Contact Info & Social -->
-      <div class="footer-col address">
-        <h5>Address</h5>
-        <p>Location: Uttar Pradesh Capital – Lucknow</p>
-        <p>Birth Place: H No. 116, Hargaon Road, Usari Piperjhala</p>
-        <p>Contact: 0522-2731211, +91 9918422098</p>
-        <p>Email: president@bahuayamiparty.in</p>
+      <!-- Contact & Social Section -->
+      <div class="col-md-5 col-lg-4 col-xl-4 mx-auto mt-3">
+        <h5 class="text-uppercase fw-bold mb-4">Contact Info</h5>
+        <p><i class="fas fa-map-marker-alt me-2"></i> Lucknow, Uttar Pradesh</p>
+        <p><i class="fas fa-home me-2"></i> H No. 116, Hargaon Rd, Usari Piperjhala</p>
+        <p><i class="fas fa-phone me-2"></i> +91 9918422098</p>
+        <p><i class="fas fa-envelope me-2"></i> president@bahuayamiparty.in</p>
 
-        <div class="social-icons">
-          <i class="fab fa-twitter"></i>
-          <i class="fab fa-instagram"></i>
-          <i class="fab fa-facebook-f"></i>
-          <i class="fab fa-youtube"></i>
-          <i class="fab fa-google-plus-g"></i>
+        <div class="mt-3">
+          <a href="#" class="text-white me-3 fs-5"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" class="text-white me-3 fs-5"><i class="fab fa-twitter"></i></a>
+          <a href="#" class="text-white me-3 fs-5"><i class="fab fa-instagram"></i></a>
+          <a href="#" class="text-white me-3 fs-5"><i class="fab fa-youtube"></i></a>
+          <a href="#" class="text-white fs-5"><i class="fab fa-google-plus-g"></i></a>
         </div>
       </div>
     </div>
+
+    <hr class="my-4 text-white-50" />
+
+    <!-- Footer Bottom -->
+    <div class="row align-items-center">
+      <div class="col text-center">
+        <p class="mb-0 text-white-50">&copy; 2025 All rights reserved by <a href="#" class="text-decoration-none text-light">kmamish.info</a></p>
+      </div>
+    </div>
   </div>
-</footer>
- <footer class="bg-dark text-white text-center py-2">
-  <p>&copy; 2025 All rights reserved by kmamish.info</p>
 </footer>
 
 

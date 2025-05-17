@@ -73,7 +73,7 @@
     <div class="row justify-content-center mb-1">
       <div class="col-lg-8 text-center" data-aos="fade-up">
         <h2 class="fw-bold display-6 text-dark mb-1">K.M. Amish Khan</h2>
-        <p class="lead text-light fw-bold" style=" font-size:15px; ">
+        <p class="lead text-dark fw-bold" style=" font-size:15px; ">
           K. M. Amish was born on 30 May 1991 in a small farmer's family in the village of Usri-Piperjhala. 
           He began his education in a government school in Piperjhala, completed high school at District Panchayat Inter College Kasta, and went on to graduate from Yuvarajdatta Y.D.P.G. College..........
         </p>
@@ -101,7 +101,19 @@
     </div>
   </div>
 </section>
-<hr>
+<hr> 
+
+<!-- Social Icons - Visible on Mobile Only -->
+<div class="d-md-none">
+  <div class="social-icons-mobile">
+    <a href="https://www.facebook.com/share/19UC62ADpK/" class="icon fb"><i class="fab fa-facebook-f"></i></a>
+    <a href="https://x.com/Multidi43528293?t=JypRJGi49eLtKGqc3uT9TQ&s=09" class="icon tw"><i class="fab fa-twitter"></i></a>
+    <a href="https://www.linkedin.com/in/k-m-amish-president-of-ngo-and-bahuayami-political-party-35a03598?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" class="icon ln"><i class="fab fa-linkedin-in"></i></a>
+    <a href="https://www.instagram.com/multidimensional_party?igsh=MXM2emg2dGQ2Ync0bQ==  " class="icon ig"><i class="fab fa-instagram"></i></a>
+    <a href="https://youtube.com/@multidimensionaleducationa4295?feature=shared" class="icon yt"><i class="fab fa-youtube"></i></a>
+  </div>
+</div>
+
 
 <!-- Here i am going to write the code of the latest news updates -->
  <h3 class="text-center"> Latest News and You-Tube Videos link</h3>
@@ -199,87 +211,70 @@
   </div>
 </div>
 
-<!-- Here i am write the code for the contactus -->
- <div class="container my-2">
+<!-- Contact Us Feedback Form -->
+<div class="container mt-2 mb-1">
   <div class="row justify-content-center">
-    <div class="col-10 text-center">
-      <h4 class="fw-bold text-primary">Join with us or give the feedback for me</h4>
-      <p class="lead mt-2 text-dark fs-6">
-           By using the below form you can easly join with me. If you want provide some feedback for me you can easly send with bt by using the given below form.
-      </p>
-    </div>
-  </div>
-</div>
- <div class="container">
-  <div class="row">
-    <!-- Join Us Form -->
-    <div class="col-md-6">
-      <div class="form-box">
-        <h3 class="text-center mb-4">Join Us With Me</h3>
-                                    <!-- Display Validation Errors -->
-                    @if ($errors->any())
-                        <div class="alert alert-danger">
-                            <ul class="mb-0">
-                                @foreach ($errors->all() as $error)
-                                    <li>{{ $error }}</li>
-                                @endforeach
-                            </ul>
-                        </div>
-                    @endif
-
-                  <!-- Display Success Message -->
-                  @if (session('success'))                  
-                       <div class="alert alert-success">
-                          {{ session('success') }}
-                         </div>
-                  @endif
-        <form action="{{ route('join.store') }}" method="POST">
-              @csrf
-             <div class="mb-3">
-          <label for="joinName" class="form-label">Full Name</label>
-          <input type="text" class="form-control" id="joinName" name="name" placeholder="Enter your full name" required>
-            </div>
-          <div class="mb-3">
-          <label for="joinEmail" class="form-label">Email address</label>
-          <input type="email" class="form-control" id="joinEmail" name="email" placeholder="Enter your email" required>
-         </div>
-        <div class="mb-3">
-        <label for="joinPhone" class="form-label">Phone Number</label>
-        <input type="tel" class="form-control" id="joinPhone" name="phone" placeholder="Enter your phone number" required>
-        </div>
-       <div class="mb-3">
-        <label for="joinInterest" class="form-label">Why do you want to join?</label>
-        <textarea class="form-control" id="joinInterest" name="interest" rows="3" placeholder="Your reason or motivation..." required></textarea>
-           </div>
-      <button type="submit" class="btn btn-primary">Join Now</button>
-      </form>
-
-      </div>
-    </div>
-
-    <!-- Feedback Form -->
-    <div class="col-md-6">
-      <div class="form-box">
+    <div class="col-md-8">
+      <div class="form-box p-4 shadow rounded bg-white">
         <h3 class="text-center mb-4">Give Us Your Feedback</h3>
-        <form>
-          <div class="mb-3">
-            <label for="fbName" class="form-label">Name</label>
-            <input type="text" class="form-control" id="fbName" placeholder="Your name" required>
+
+        @if(session('success'))
+        <div class="alert alert-success">{{ session('success') }}</div>
+        @endif
+
+        <form action="{{ route('feedback.store') }}" method="POST">
+          @csrf
+          <div class="row mb-3">
+            <div class="col-md-6">
+              <label for="fbName" class="form-label">Name</label>
+              <input type="text" class="form-control" name="name" id="fbName" placeholder="Your name" required>
+            </div>
+            <div class="col-md-6">
+              <label for="fbPhone" class="form-label">Phone Number</label>
+              <input type="tel" class="form-control" name="phone" id="fbPhone" placeholder="Your phone number" required>
+            </div>
           </div>
-          <div class="mb-3">
-            <label for="fbPhone" class="form-label">Phone Number</label>
-            <input type="tel" class="form-control" id="fbPhone" placeholder="Your phone number" required>
-          </div>
+
           <div class="mb-3">
             <label for="fbMessage" class="form-label">Your Feedback</label>
-            <textarea class="form-control" id="fbMessage" rows="4" placeholder="Share your thoughts..." required></textarea>
+            <textarea class="form-control" name="message" id="fbMessage" rows="4" placeholder="Share your thoughts..." required></textarea>
           </div>
-          <button type="submit" class="btn btn-success">Submit Feedback</button>
+
+          <div class="text-center">
+            <button type="submit" class="btn btn-success px-4">Submit Feedback</button>
+          </div>
         </form>
+
       </div>
     </div>
   </div>
 </div>
+
+
+
+<!-- Here i am creating the contacts idons to contact the km amish sir -->
+  <section class="text-center">
+    <h4>Direct call Whattsapp and E-mail</h4>
+    <p>This is the link where you can click and direct call to the K.M. Amish anytime and anywhere. </p>
+  </section>
+  <div class="container text-center contact-icons">
+    <!-- Call Icon -->
+    <a href="tel:+919918422098" class="icon-btn call-icon" title="Call KM Amish">
+      <i class="bi bi-telephone-fill"></i>
+    </a>
+
+    <!-- WhatsApp Icon -->
+    <a href="https://wa.me/919918422098" target="_blank" class="icon-btn whatsapp-icon" title="WhatsApp KM Amish">
+      <i class="bi bi-whatsapp"></i>
+    </a>
+
+    <!-- WhatsApp Icon -->
+    <a href="mailto:president@bahuayamiparty.in" class="icon-btn email-icon" title="Email KM Amish">
+      <i class="bi bi-envelope-fill"></i>
+    </a>
+  </div>
+
+  
 
    </x-slot>
 </x-layout>

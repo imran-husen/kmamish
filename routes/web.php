@@ -13,6 +13,7 @@ Route::get('/Educational-life', [MainController::class, 'education']);
 Route::get('/Writter-life', [MainController::class, 'writter']);
 Route::get('/Social-life', [MainController::class, 'social']);
 Route::get('/Polotical-life', [MainController::class, 'polotical']);
+Route::get('/Join-us', [MainController::class, 'join']);
 
 
 
@@ -27,6 +28,12 @@ Route::post('/Dashbord-Admin-Panels', [AdminController::class, 'dashboard']);
 
 // stored the data from home panels
 Route::post('/join', [AdminController::class, 'store'])->name('join.store');
+
+// Stored the data from the home panels
+Route::post('/feedback', [AdminController::class, 'store_feedback'])->name('feedback.store');
+
+// Stored the data of the user message
+Route::post('/contact', [AdminController::class, 'store_notification'])->name('contact.store');
 
 
 

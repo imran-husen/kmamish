@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- This is the css properties of the html-->
-       <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+    
        <script src="{{ asset('javascript/main.js') }}"></script>
 
        <!-- This is the code of the favicons of the website -->
@@ -53,46 +53,143 @@
 
 <!-- Hidden Templates -->
 <template id="dashboard">
-  <h4>Welcome, Mr. K.M. Amish</h4>
+  <h4 class=" text-center fw-bold">Welcome! Mr. K.M. Amish</h4>
   <div class="row g-3 mb-4">
     <div class="col-md-4">
       <div class="card card-box p-3">
-        <h5>Latest News</h5>
+        <h5 class="fw-bold text-danger">Latest News</h5>
         <p class="text-muted">Recent headlines uploaded</p>
         <span class="badge bg-primary">24 News</span>
       </div>
     </div>
     <div class="col-md-4">
       <div class="card card-box p-3">
-        <h5>YouTube Links</h5>
+        <h5 class="fw-bold text-danger">YouTube Links</h5>
         <p class="text-muted">Total linked videos</p>
         <span class="badge bg-success">13 Videos</span>
       </div>
     </div>
     <div class="col-md-4">
       <div class="card card-box p-3">
-        <h5>Blog Posts</h5>
+        <h5 class="fw-bold text-danger">Blog Posts</h5>
         <p class="text-muted">Articles uploaded</p>
         <span class="badge bg-warning text-dark">8 Blogs</span>
       </div>
     </div>
   </div>
+  <div class="row g-3 mb-4">
+  <div class="col-md-4">
+    <div class="card card-box p-3">
+      <h5 class="fw-bold text-success">Total Joined Members</h5>
+      <p class="text-muted">People registered on the platform</p>
+      <span class="badge bg-info text-dark">{{ $totalJoinedUsers }} Join Members</span>
+    </div>
+  </div>
+  <div class="col-md-4">
+    <div class="card card-box p-3">
+      <h5 class="fw-bold text-success">Total Feedback</h5>
+      <p class="text-muted">User feedback submitted</p>
+      <span class="badge bg-secondary">{{ $totalfeedback }} User Feedback</span>
+    </div>
+  </div>
+  <div class="col-md-4">
+    <div class="card card-box p-3">
+      <h5 class="fw-bold text-success">Total Notifications</h5>
+      <p class="text-muted">Alerts and announcements</p>
+      <span class="badge bg-danger">{{ $totalnotification }} User Notification</span>
+    </div>
+  </div>
+</div>
 </template>
 
+<!-- This is the page of shown the date of those user which is join us -->
 <template id="join">
-  <h3>Join Us Requests</h3>
-  <p>Manage form submissions and applicant data.</p>
-  
+  <h4 class="text-center text-danger fw-bold" >Join Us Requests</h4>
+  <p class="text-center"><u>This is is the data of those user which have join to you and fallow you from the lot of socila media</u></p>
+   
+  <!-- Here i am writing the code of the tables -->
+   <div class="container mt-2">
+  <div class="table-responsive">
+    <table class="table table-hover table-bordered align-middle shadow-sm">
+      <thead class="table-dark">
+        <tr>
+          <th scope="col">Sr. No</th>
+          <th scope="col">Name</th>
+          <th scope="col">Email</th>
+          <th scope="col">Mobile Number</th>
+          <th scope="col">Interest</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Example row -->
+        <tr>
+          
+          @foreach ( $joinUser as $ju)
+         <th>{{ $ju->id	}}</th>
+         <td>{{ $ju->name}}</td>
+         <td>{{ $ju->email }}</td>
+         <td>{{ $ju->phone }}</td>
+         <td>{{ $ju->interest }}</td>
+        </tr>
+        @endforeach
+        <!-- Add more rows dynamically -->
+      </tbody>
+    </table>
+  </div>
+</div>
+
+
 </template>
 
 <template id="notifications">
-  <h3>Notifications Panel</h3>
-  <p>Send new announcements to users here.</p>
+  <h4 class=" text-center text-success fw-bold">Notifications Panel</h4>
+  <p class="text-center">This is total notification, which is send by the user for the you and your team</p>
+
+  <!-- Notification Section -->
+<div class="container">
+  <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 g-4">
+    @foreach ($notification as $sms)
+    <div class="col">
+      <div class="card notification-card">
+        <div class="card-body">
+          <div class="notification-title">{{ $sms->name }}</div>
+          <p class="mb-1" style="font-size: 10px">{{ $sms->message }}</p>
+          <div class="notification-time">{{ $sms->created_at->format('d M Y') }}</div>
+        </div>
+      </div>
+    </div>
+    @endforeach
+  </div>
+</div>
+
+
+
 </template>
 
 <template id="feedback">
-  <h3>User Feedback</h3>
-  <p>Review feedback messages submitted by users.</p>
+  <h3 class="text-center text-danger fw-bold">User Feedback</h3>
+  <p class="text-center "><u>Here available the all review and feedback of the of the user that is given below. </u></p>
+
+ <!-- Feedback Cards Section -->
+<div class="container my-1">
+  <div class="row">
+    @foreach ($feedback as $review)
+      <div class="col-md-4 mb-4">
+        <div class="card h-100 shadow-sm">
+          <div class="card-body">
+            <h6 class="card-title text-center text-primary fw-bold">{{ $review->name }}</h6>
+            <p class="card-subtitle mb-1 text-center text-success fw-bold">{{ $review->phone }}</p>
+            <p class="card-text text-center" style="font-size:10px">{{ $review->message }}</p>
+          </div>
+          <div class="card-footer text-muted text-center">
+            {{ $review->created_at->format('d M Y') }} 
+          </div>
+        </div>
+      </div> 
+    @endforeach
+  </div>
+</div>
+
 </template>
 
 <template id="upload-news">

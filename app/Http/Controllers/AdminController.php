@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\JoinUser;
+use App\Models\feedbackUser;
+use App\Models\notification;
 
 class AdminController extends Controller
 {
@@ -24,7 +26,18 @@ class AdminController extends Controller
 
         if (isset($data['mail'], $data['pass'])) {
             if ($data['mail'] === "president@bahuayamiparty.in" && $data['pass'] === "kmamish@2025") {
-                return view('admin.dashboard');
+
+             // Here i am sending the data on the admin panles of the join and feedback
+             $joinUser = JoinUser::all();
+             $totalJoinedUsers = JoinUser::count();
+             // This is the user feedback
+             $feedback = feedbackUser::all();
+             $totalfeedback = feedbackUser::count();
+             // This is notification of the user
+             $notification= notification::all();
+             $totalnotification= notification::count();
+
+             return view('admin.dashboard',compact('joinUser', 'feedback', 'totalJoinedUsers','totalfeedback', 'notification', 'totalnotification'));
             }
         }
 
@@ -50,5 +63,35 @@ public function store(Request $request)
 
     return back()->with('success', 'Your form has been submitted successfully!');
 }
+
+// Here i am storing the database of the feedback data
+public function store_feedback(Request $request)
+    {
+        $validated = $request->validate([
+            'name' => 'required|string|max:255',
+            'phone' => 'required|string|max:20',
+            'message' => 'required|string',
+        ]);
+
+        FeedbackUser::create($validated);
+
+        return redirect()->back()->with('success', 'Feedback submitted successfully!');
+    }
+
+
+
+// Here i am writing the code to save the user message
+ public function store_notification(Request $request)
+    {
+        $validated = $request->validate([
+            'name' => 'required|string|max:255',
+            'email' => 'required|email|max:255',
+            'message' => 'required|string',
+        ]);
+
+        notification::create($validated);
+
+        return redirect()->back()->with('success', 'Message sent successfully!');
+    }
     
 }

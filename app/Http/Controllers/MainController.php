@@ -31,6 +31,10 @@ class MainController extends Controller
         return view('polotical');
     }
 
+    // Here i am write the code of the join us page
+    public function join(){
+        return view('join');
+    }
 
 
 }
