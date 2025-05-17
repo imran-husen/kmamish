@@ -115,30 +115,50 @@ body{
 
   
 /* code of the fedback and contact us form */
-
-    .form-box {
-      background: white;
-      border-radius: 15px;
+.form-box1 {
+      background-color: #ffffff;
+      border-radius: 12px;
       padding: 30px;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-      margin-bottom: 20px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+      transition: all 0.3s ease-in-out;
     }
-    h3 {
-      color: #007BFF;
-      font-weight: bold;
+
+    .form-box1 h3 {
+      font-weight: 600;
+      color: #333;
     }
-    .btn-primary, .btn-success {
+
+    .form-control {
       width: 100%;
-      font-weight: bold;
+      border-radius: 8px;
+      border: 1px solid #ced4da;
+      transition: 0.2s ease;
     }
-    @media (max-width: 768px) {
-      .form-box {
-        margin-top: 20px;
+
+    .form-control:focus {
+      border-color: #198754;
+      box-shadow: 0 0 0 0.2rem rgba(25, 135, 84, 0.25);
+    }
+
+    .btn-success {
+      background-color: #198754;
+      border: none;
+      padding: 10px 24px;
+      font-weight: 600;
+      transition: background-color 0.3s ease;
+    }
+
+    .btn-success:hover {
+      background-color: #157347;
+    }
+
+    @media (max-width: 767.98px) {
+      .form-box .row .col-md-6 {
+        margin-bottom: 15px;
       }
     }
 
-
-    /* This is the code of the socila media link */
+  /* This is the code of the socila media link */
   .social-icons-mobile {
   position: fixed;
   bottom: 20px;   /* Changed from top: 50% + transform */
@@ -273,7 +293,6 @@ body{
     }
 
     /*.....................This is code of the join us section............................*/
- /* Wrapper to place both forms in a row */
 .form-row-wrapper {
   display: flex;
   flex-wrap: wrap;

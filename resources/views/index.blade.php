@@ -211,12 +211,12 @@
   </div>
 </div>
 
-<!-- Contact Us Feedback Form -->
+<!-- Feedback Form Section -->
 <div class="container mt-2 mb-1">
   <div class="row justify-content-center">
     <div class="col-md-8">
-      <div class="form-box p-4 shadow rounded bg-white">
-        <h3 class="text-center mb-4">Give Us Your Feedback</h3>
+      <div class="form-box1 p-4 shadow rounded bg-white">
+        <h3 class="text-center mb-4 fw-bold text-danger">Give Us Your Feedback</h3>
 
         @if(session('success'))
         <div class="alert alert-success">{{ session('success') }}</div>
@@ -253,8 +253,8 @@
 
 
 <!-- Here i am creating the contacts idons to contact the km amish sir -->
-  <section class="text-center">
-    <h4>Direct call Whattsapp and E-mail</h4>
+  <section class="text-center mt-2">
+    <h4>Direct call, Whattsapp and E-mail</h4>
     <p>This is the link where you can click and direct call to the K.M. Amish anytime and anywhere. </p>
   </section>
   <div class="container text-center contact-icons">

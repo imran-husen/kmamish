@@ -84,7 +84,7 @@
           </div>
         @endif 
 
-     <form action="{{ route('contact.store') }}" method="POST">
+     <form action="{{ route('contact.store') }}" method="POST" style="border:2px solid black; padding:13px; border-radius:15px">
         @csrf
       <div class="mb-3">
         
