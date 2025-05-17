@@ -4,87 +4,113 @@
   <x-slot name="bodycode">
 
   <!-- Hero Section -->
-  <section class="hero-section m-3 text-center">
-    <h2 class="fw-bold">Be a Part of K.M. Amish Army</h2>
-    <p>K.M. Amish army group is the best group that always involve education, social and polotical environments.</p>
-  </section>
-
-  <!-- Join Us Form -->
-    <div class="col-md-6 m-2">
-      <div class="form-box">
-        <h3 class="text-center mb-4">Join Us With Me</h3>
-                                    <!-- Display Validation Errors -->
-                    @if ($errors->any())
-                        <div class="alert alert-danger">
-                            <ul class="mb-0">
-                                @foreach ($errors->all() as $error)
-                                    <li>{{ $error }}</li>
-                                @endforeach
-                            </ul>
-                        </div>
-                    @endif
-
-                  <!-- Display Success Message -->
-                  @if (session('success'))                  
-                       <div class="alert alert-success">
-                          {{ session('success') }}
-                         </div>
-                  @endif
-        <form action="{{ route('join.store') }}" method="POST">
-              @csrf
-             <div class="mb-3">
-          <label for="joinName" class="form-label">Full Name</label>
-          <input type="text" class="form-control" id="joinName" name="name" placeholder="Enter your full name" required>
-            </div>
-          <div class="mb-3">
-          <label for="joinEmail" class="form-label">Email address</label>
-          <input type="email" class="form-control" id="joinEmail" name="email" placeholder="Enter your email" required>
-         </div>
-        <div class="mb-3">
-        <label for="joinPhone" class="form-label">Phone Number</label>
-        <input type="tel" class="form-control" id="joinPhone" name="phone" placeholder="Enter your phone number" required>
-        </div>
-       <div class="mb-3">
-        <label for="joinInterest" class="form-label">Why do you want to join?</label>
-        <textarea class="form-control" id="joinInterest" name="interest" rows="3" placeholder="Your reason or motivation..." required></textarea>
-           </div>
-      <button type="submit" class="btn btn-primary">Join Now</button>
-      </form>
-
+<section class="hero-section m-3">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-md-8 text-center">
+        <h2 class="fw-bold">Be a Part of K.M. Amish Army</h2>
+        <p>
+          K.M. Amish army group is the best group that always involve
+          education, social and political environments.
+        </p>
       </div>
     </div>
+  </div>
+</section>
 
-  <!-- Notification Form -->
-  <section class="form-wrapper m-2 text-center">
-    <h4 class="text-center text-primary mb-4">Send a Message to the Admin</h4>
-        @if(session('success'))
-        <div class="alert alert-success">
-                  {{ session('success') }}
+
+<div class="container mt-0">
+  <div class="row justify-content-center">
+    <div class="col-md-12">
+      <div class="form-row-wrapper">
+        
+        <!-- Paste your "Join Us" form here -->
+         <div class="form-box bg-white p-4 rounded shadow-sm">
+        <h3 class="text-center mb-4">Join Us With Me</h3>
+
+        <!-- Validation Errors -->
+        @if ($errors->join->any())
+        <div class="alert alert-danger">
+          <ul class="mb-0">
+            @foreach ($errors->join->all() as $error)
+              <li>{{ $error }}</li>
+            @endforeach
+          </ul>
         </div>
+        @endif
+
+        <!-- Success Message -->
+        @if (session('join_success'))
+        <div class="alert alert-success">
+          {{ session('join_success') }}
+        </div>
+        @endif
+
+        <form action="{{ route('join.store') }}" method="POST">
+          @csrf
+
+          <!-- Full Name & Phone Side-by-Side -->
+          <div class="row">
+            <div class="col-md-6 mb-3">
+              <label for="joinName" class="form-label">Full Name</label>
+              <input type="text" class="form-control" id="joinName" name="name" placeholder="Enter your full name" required>
+            </div>
+            <div class="col-md-6 mb-3">
+              <label for="joinPhone" class="form-label">Phone Number</label>
+              <input type="tel" class="form-control" id="joinPhone" name="phone" placeholder="Enter your phone number" required>
+            </div>
+          </div>
+
+          <div class="mb-3">
+            <label for="joinEmail" class="form-label">Email Address</label>
+            <input type="email" class="form-control" id="joinEmail" name="email" placeholder="Enter your email" required>
+          </div>
+
+          <div class="mb-3">
+            <label for="joinInterest" class="form-label">Why do you want to join?</label>
+            <textarea class="form-control" id="joinInterest" name="interest" rows="3" placeholder="Your reason or motivation..." required></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-primary w-100">Join Now</button>
+        </form>
+      </div>
+
+        <!-- Paste your "Notification" form here -->
+         <div>
+    <h4 class="text-center text-danger mb-4 fw-bold"><u>Send a Message to the Admin</u></h4>
+        @if(session('success'))
+          <div class="alert alert-success">
+                  {{ session('success') }}
+          </div>
         @endif 
 
      <form action="{{ route('contact.store') }}" method="POST">
         @csrf
       <div class="mb-3">
-        <label for="name" class="form-label">Your Full Name</label>
+        
         <input type="text" class="form-control" name="name" id="name" placeholder="John Doe" required />
       </div>
       <div class="mb-3">
-        <label for="email" class="form-label">Your Email</label>
+        
         <input type="email" class="form-control" id="email"  name="email" placeholder="example@domain.com" required />
       </div>
       <div class="mb-3">
-        <label for="message" class="form-label">Your Message</label>
+     
         <textarea class="form-control" id="message" rows="5" name="message" placeholder="Write your message here..." required></textarea>
       </div>
       <div class="d-grid">
         <button type="submit" class="btn btn-send">Send Message</button>
       </div>
     </form>
-  </section>
+</div>
+      </div>
+    </div>
+  </div>
+</div>
+
 
   <!-- Here i am creating the contacts idons to contact the km amish sir -->
-  <section class="text-center">
+  <section class="text-center mt-2">
     <h4>Direct call Whattsapp and E-mail</h4>
     <p>This is the link where you can click and direct call to the K.M. Amish anytime and anywhere. </p>
   </section>

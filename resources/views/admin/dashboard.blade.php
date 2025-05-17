@@ -161,9 +161,6 @@
     @endforeach
   </div>
 </div>
-
-
-
 </template>
 
 <template id="feedback">
