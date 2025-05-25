@@ -133,7 +133,7 @@
             @endif
             <div class="card-body">
                  <a href="{{ url('/News-Gallery') }}" class="text-primary text-decoration-none text-center fw-bold">{{ $news->title }}</a>
-                <p class="card-text text-dark" style="font-size:8px; ">{{ Str::limit($news->description, 100, '...') }}</p>
+                <p class="card-text text-dark" style="font-size:8px;">{{ Str::limit($news->description, 100, '...') }}</p>
             </div>
         </div>
     </div>
@@ -152,7 +152,7 @@
         @endif
         <div class="card-body">
             <a href="{{ url('/News-Gallery') }}" class="text-primary text-decoration-none text-center fw-bold"> {{ $news->title }}</a>
-          <p class="card-text text-center">{{ Str::limit($news->description, 100, '...') }}</p>
+          <p class="card-text text-dark text-center" style="font-size:8px;">{{ Str::limit($news->description, 100, '...') }}</p>
         </div>
       </div>
     </div>
@@ -167,21 +167,15 @@
 
     <!-- Right: YouTube Videos -->
     <div class="col-lg-3">
-      <div class="youtube-box">
-        <h5 class="text-center mb-3 fw-bold text-danger">YouTube Videos</h5>
-        <div class="scroll-box">
-          <div class="scroll-content">
-            <div class="mb-3">
-              <iframe width="100%" height="180" src="https://www.youtube.com/embed/3LZRdV3GAGE" allowfullscreen></iframe>
-            </div>
-            <div class="mb-3">
-              <iframe width="100%" height="180" src="https://www.youtube.com/embed/5bDg8txbPBI" allowfullscreen></iframe>
-            </div>
-            <div class="mb-3">
-              <iframe width="100%" height="180" src="https://www.youtube.com/embed/KWlIkm_8Te4" allowfullscreen></iframe>
-            </div>
+  <div class="youtube-box">
+    <h5 class="text-center mb-3 fw-bold text-danger">YouTube Videos</h5>
+    <div class="scroll-box">
+      <div class="scroll-content">
+        @foreach($latestvideos as $video)
+          <div class="mb-3">
+            <iframe width="100%" height="180" src="{{ $video->link }}" allowfullscreen></iframe>
           </div>
-        </div>
+        @endforeach
       </div>
     </div>
   </div>
@@ -205,7 +199,16 @@
       <i class="fas fa-flask"></i>
       Google Researcher
     </a>
+
+    <a href="https://multidpublication.blogspot.com/ " class="google-btn google-blogging" target="_blank">
+  <i class="fas fa-pen-nib"></i>
+  blogging
+</a>
 </div>
+
+
+<!-- Here i am going to th write the code for the writing and publication shown in the desktop  -->
+
 
 <!-- Feedback Form Section -->
 <div class="container mt-4 mb-2">

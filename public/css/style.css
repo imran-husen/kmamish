@@ -120,6 +120,11 @@ body{
       color: white;
     }
 
+    .google-blogging{
+      background-color: #d45105;
+      color: white;
+    }
+
     .google-btn:hover {
       opacity: 0.85;
       text-decoration: none;
@@ -129,6 +134,11 @@ body{
     .google-btn i {
       font-size: 1.2rem;
     }
+
+
+    /* This is code of the crousel invention cards and many more */
+    
+    
 
 /*code of the icons for whattsapp and calls */
 
@@ -225,53 +235,6 @@ body{
 .icon.ig { background: #e1306c; }
 .icon.yt { background: #ff0000; }
 
-
-
-    /* ...................Here i am writing the code of the writter page......................... */
-    .journey-section {
-      padding: 80px 0;
-    }
-    .stage-card {
-      background: white;
-      border-left: 5px solid #0d6efd;
-      padding: 30px;
-      margin-bottom: 15px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.05);
-    }
-    .stage-icon {
-      font-size: 2.5rem;
-      color: #0d6efd;
-    }
-    .stage-title {
-      margin-top: 15px;
-      font-weight: bold;
-    }
-
-/*...........................This is the code of the social life......................... */
-.hero {
-      background: linear-gradient(135deg, #0d6efd, #6f42c1);
-      color: white;
-      padding: 80px 20px;
-    }
-    .section-title {
-      margin-bottom: 40px;
-      font-weight: bold;
-    }
-    .social-card {
-      transition: transform 0.3s, box-shadow 0.3s;
-      background-color: white;
-      border: none;
-      border-radius: 12px;
-    }
-    .social-card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
-    }
-    .icon-box {
-      font-size: 2rem;
-      color: #0d6efd;
-      margin-bottom: 10px;
-    }
 
 
 /* .........................Plotical Page................................. */

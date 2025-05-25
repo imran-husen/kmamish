@@ -23,7 +23,8 @@ class MainController extends Controller
 
         // i will compact the data on here
         $latestNews = news::latest()->take(3)->get();
-        return view('index',['latestNews' => $latestNews]);
+        $latestvideos = youtube::latest()->take(3)->get();
+        return view('index',['latestNews' => $latestNews, 'latestvideos' => $latestvideos]);
     }
     //Routing for the test page 
     public function about(){
