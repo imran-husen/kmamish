@@ -100,7 +100,44 @@
     </div>
   </div>
 </section>
-<hr> 
+
+
+<!-- Here i am going to create a best box for the ideology of the Bhu ayami party -->
+  <div class="container my-4">
+    <div class="ideology-container">
+
+      <div class="card ideology-card">
+        <div class="ideology-heading text-center" style="color: yellow; text-shadow:1px 2px black">
+          Ideology
+        </div>
+        <div class="card1-body">
+          <p class="card1-text text-center mt-1">
+            Before defining multidimensional personality or Multidimensionalism, let us pay special attention to the following notion:The origin of the word Multidimensional comes from dimensions, dimensions, directions, For example, if we talk about Multidimensional, then we see that we are living in three directions, which we can speak in forward, backward, left, up, down. For example, if an insect is allowed to crawl on a thread, it will experience only one dimension, similarly if it is made to sit on a table, it will experience two dimensions if the same insect is allowed to fly. If he is free, then he will be able to experience the three directions.
+            <span class="collapse" id="readMore1">
+              Similarly, the definition of Multidimensionalism is being given, taking into account Multidimensional education, Multidimensional technology and Multidisciplinary research.
+If we talk about a Multidimensional personality, then one who has the ability to talk and act on many aspects at the same time which is referred to with any aptitude or conditions. Ability, Multidimensional curiosity, Multidimensional activities, Multidimensional limitless personality, Multidimensional spiritual growth, and Multidimensional personal development, Multidimensional knowledge, and universality of skills is the personality of a Multidimensional rationalist who continues to move forward in the bottomless ocean.
+Given the multifaceted talent
+It displays the versatility of Multidimensional knowledge, expanding the boundaries of versatility, freedom to choose the application point of effort, ability to learn from experiences, freedom from passivity and boringness, enjoyment from creativity and self-expression, envelopment of the surrounding environment, lives.
+Versatility requires that one strives to cultivate his personality by flaunting his knowledge, skills, educational taste, practice, labour, practical tools, of various fields.
+In short, it can be said that such a personality who has many dimensions, many thoughts, many levels, many angles, many directions, many magnitudes, many concepts, has a precise guidance.
+And last every person is the owner of a Multidimensional personality, without understanding its positive negative importance and identity, it seems impossible to bring peace in the society or the world, every Multidimensional personality is responsible for the change in the global social conditions.
+For example, if you and I are a Multidimensional personality and all my identities are Multidimensional in the right directions, then you and I will certainly be able to make a better miraculous change in the direction of peace and development in the world.
+If the direction is changed by mistake in making continuous progress, then surely the world will be bound to reach the point of collapse.
+(For example, Multidimensional science has shown by inventing the atomic bomb) And surely the Multidimensional personality will go on getting destroyed.
+If any work is done continuously without mistake and without difficulty, then it is considered an indicator of intellectual ability.
+Understanding the situation and circumstances of the present society, there is a need to make changes in education technology and research with important Multidimensional thinking
+            </span>
+          </p>
+            <div class="d-flex justify-content-center my-1">
+                 <a class="btn btn-primary btn-sm" data-bs-toggle="collapse" href="#readMore1" role="button" aria-expanded="false" aria-controls="readMore1">
+                    Read More
+                 </a>
+             </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
 
 <!-- Social Icons - Visible on Mobile Only -->
 <div class="d-md-none">
@@ -151,9 +188,9 @@
           <img src="{{ asset('/image/slider 3.png') }}" class="card-img-top" alt="Default image">
         @endif
         <div class="card-body">
-            <a href="{{ url('/News-Gallery') }}" class="text-primary text-decoration-none text-center fw-bold"> {{ $news->title }}</a>
-          <p class="card-text text-dark text-center" style="font-size:8px;">{{ Str::limit($news->description, 200, '...') }}</p>
-        </div>
+                 <a href="{{ url('/News-Gallery') }}" class="text-primary text-decoration-none text-center" style="font-family: 'Poppins', sans-serif; font-size:12px;">{{ $news->title }}</a>
+                <p class="card-text text-dark" style="font-size:8px; font-family: 'Poppins', sans-serif;">{{ Str::limit($news->description, 250, '...') }}</p>
+            </div>
       </div>
     </div>
     @endforeach
@@ -181,6 +218,15 @@
   </div>
 </div>
 
+<!-- Here i am going to create a  dive thar heights will be 50px where move some inportnat links -->
+ <div class="gradient-box d-flex align-items-center cols-10">
+  <div class="scrolling-links">
+    <a href="https://www.multidpublication.in/society/index.aspx" class="link-box">बहुआयामी शिक्षा तकनीकी अनुसंधान एवं समिति के आधिकारिक वेबसाइट लिंक</a>
+    <a href="https://www.multidpublication.in/index.aspx" class="link-box">बहुआयामी प्रकाशन हाउस की आधिकारिक वेबसाइट लिंक</a>
+    <a href="https://news.multidpublication.in/" class="link-box">बहुआयामी समाचार की आधिकारिक वेबसाइट की लिंक </a>
+    <a href="https://www.bahuayamiparty.in/" class="link-box">बहुआयामी पार्टी के आधिकारिक वेबसाइटकी लिंक </a>
+  </div>
+</div>
 
 <!-- This is the code of the hyper link -->
  <h4 class="text-center fw-bold mt-1">Importanat link</h4>
@@ -207,7 +253,6 @@
 </div>
 
 
-<!-- Here i am going to th write the code for the writing and publication shown in the desktop  -->
 
 
 <!-- Feedback Form Section -->

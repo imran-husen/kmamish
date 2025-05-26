@@ -24,8 +24,6 @@
 </div>
 
 
-
-
 <!--  Here i am creating a link for the visiste the publication link -->
 <div class="container my-4">
   <h5 class="text-center text-success fw-bold m-2">
