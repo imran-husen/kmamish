@@ -152,7 +152,7 @@
         @endif
         <div class="card-body">
             <a href="{{ url('/News-Gallery') }}" class="text-primary text-decoration-none text-center fw-bold"> {{ $news->title }}</a>
-          <p class="card-text text-dark text-center" style="font-size:8px;">{{ Str::limit($news->description, 100, '...') }}</p>
+          <p class="card-text text-dark text-center" style="font-size:8px;">{{ Str::limit($news->description, 200, '...') }}</p>
         </div>
       </div>
     </div>
