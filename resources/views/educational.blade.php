@@ -15,8 +15,8 @@
         <div class="achievement-card">
           <img src="{{ asset($item->image) }}" class="card-img-top" alt="Achievement Image">
           <div class="card-body">
-            <h5 class="card-title text-danger text-center fw-bold" style="font-size:12px ">{{ $item->title }}</h5>
-            <p class="card-text text-center "  style="font-size:10px ">{{ $item->description }}</p>
+            <h5 class="card-title text-danger text-center fw-bold" style="font-size:12px ">{{ Str::limit($item->description, 80, '...') }}</h5>
+            <p class="card-text text-center fw-bold "  style="font-size:10px ">{{ Str::limit($item->description, 130, '...') }}</p>
           </div>
         </div>
       </div>

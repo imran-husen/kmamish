@@ -531,31 +531,33 @@ textarea {
     }
 
     /* ...........................................This is the css of the writer cards........................................... */
-    .writer-card {
-      width: 300px;
-      height: 310px;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-      margin: 0 auto; /* center cards on mobile */
-    }
+.writer-card {
+  height: 350px;
+  width: 300px;
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #ddd;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
 
-    .writer-card:hover {
-      transform: scale(1.05);
-      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
-    }
+.writer-image {
+  height: 75%;
+  width: 100%;
+  object-fit: contain; /* Ensures full image fits without cropping */
+  background-color: #f8f8f8; /* Optional: to show image boundaries clearly */
+}
 
-    .writer-card .card-img-top {
-      width: 100%;
-      height: 250px;
-      object-fit: contain;
-      background-color: #f8f9fa;
-    }
+.writer-body {
+  height: 25%;
+  overflow: hidden;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
 
-    @media (max-width: 768px) {
-      .writer-card {
-        width: 100%;
-        max-width: 300px;
-      }
-    }
+
 
 
     /* .............................this is code of the evcents section...................................... */
