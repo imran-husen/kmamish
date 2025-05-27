@@ -71,7 +71,7 @@
     <!-- Heading -->
     <div class="row justify-content-center mb-1">
       <div class="col-lg-8 text-center" data-aos="fade-up">
-        <h2 class="fw-bold display-6 text-dark mb-1">K.M. Amish Khan</h2>
+        <h2 class="fw-bold display-6 text-dark mb-1">K.M. Amish </h2>
         <p class="lead text-dark fw-bold" style=" font-size:15px; ">
           K. M. Amish was born on 30 May 1991 in a small farmer's family in the village of Usri-Piperjhala. 
           He began his education in a government school in Piperjhala, completed high school at District Panchayat Inter College Kasta, and went on to graduate from Yuvarajdatta Y.D.P.G. College..........

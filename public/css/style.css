@@ -329,33 +329,82 @@ body{
 
 
 /* .........................Plotical Page................................. */
+     .polotics-card {
+      width: 300px;
+      height: 350px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      border: 1px solid #ddd;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+    }
 
+    .polotics-card img {
+      width: 100%;
+      height: 75%;
+      object-fit: contain;
+      background-color: #f8f9fa;
+      cursor: pointer;
+    }
 
-    .hero {
-      background: linear-gradient(135deg, #198754, #0d6efd);
-      color: white;
-      padding: 80px 20px;
+    .polotics-card .card-body {
+      height: 25%;
+      padding: 10px;
+      overflow: hidden;
       text-align: center;
     }
-    .section-title {
-      margin-bottom: 40px;
-      font-weight: bold;
+
+    .card-title {
+      font-family: 'Noto Sans Devanagari', 'Poppins', sans-serif;
+      font-weight: 700;
+      font-size: 18px;
+      color: #333;
     }
-    .card-politic {
-      background: white;
-      border-left: 5px solid #198754;
-      padding: 25px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.05);
-      transition: transform 0.3s;
+
+    .card-text {
+      font-family: 'Poppins', sans-serif;
+      font-size: 14px;
+      color: #555;
+    }
+
+    /* Responsive layout adjustments */
+    @media (min-width: 992px) {
+      .col-md-3 {
+        flex: 0 0 auto;
+        width: 25%;
+      }
+    }
+
+    @media (max-width: 767.98px) {
+      .col-12 {
+        width: 100%;
+      }
+    }
+
+    /* Fullscreen image style */
+    .fullscreen-image {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
       height: 100%;
+      background-color: rgba(0, 0, 0, 0.9);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      z-index: 1050;
     }
-    .card-politic:hover {
-      transform: translateY(-5px);
-    }
-    .icon-box {
-      font-size: 2.5rem;
-      color: #0d6efd;
-      margin-bottom: 15px;
+
+    .fullscreen-image img {
+      max-width: 90%;
+      max-height: 90%;
+      object-fit: contain;
+      border: 4px solid #fff;
+      border-radius: 4px;
+      box-shadow: 0 0 10px #000;
+      transition: all 0.3s ease-in-out;
+      cursor: zoom-out;
     }
 
     /*.....................This is code of the footer  section............................*/
