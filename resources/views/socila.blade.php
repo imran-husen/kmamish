@@ -7,23 +7,50 @@
 
      <h5 class="text-center fw-bold text-warming mt-2"> Social Working and  Achievements by KM Amish</h5>
      <p class="text-center fs-6 "> This is total and latest social working and Achievements by the kamaish. In the belos list you can see the the lot of Social work of the KM Amish</p>
-     
+    
 
-     <div class="container my-4">
+
+<div class="container my-4">
   <div class="row justify-content-center g-4">
-    @foreach($social as $item)
-      <div class="col-12 col-md-3 d-flex justify-content-center">
-        <div class="card writer-card text-center">
-          <img src="{{ $item->image }}" class="card-img-top" alt="{{ $item->title }}">
-          <div class="card-body">
-            <h5 class="card-title">{{ $item->title }}</h5>
-            <p class="card-text"  style="font-size:15px">{{ Str::limit($item->description, 150, '...') }}</p>
-          </div>
+
+    <!-- Example cards; replace with Blade loop or dynamic backend rendering -->
+     @foreach($social as $item)
+    <div class="col-12 col-md-3 d-flex justify-content-center">
+      <div class="card social-card text-center">
+        <img src="{{ $item->image }}" alt="{{ $item->title }}" class="m-1">
+        <div class="card-body">
+          <h5 class="card-title" style="font-family: 'Noto Sans Devanagari', sans-serif; font-weight: 700; font-size: 12px; color: #333;"> {{ Str::limit($item->description, 50, '...') }}</h5>
+          <p class="card-text"  style="font-family: 'Noto Sans Devanagari', 'Poppins', sans-serif; font-weight: 700; font-size: 10px; color: #333;">{{ Str::limit($item->description, 150, '...') }}</p>
         </div>
       </div>
-    @endforeach
+    </div>
+     @endforeach
   </div>
 </div>
+
+<!-- Fullscreen overlay container -->
+<div id="fullscreenImage" class="fullscreen-image" onclick="hideFullscreen()">
+  <img id="fullscreenImg" src="" alt="Fullscreen View">
+</div>
+
+
+<!-- This is the js code -->
+ <script>
+  // Handle image click to fullscreen
+  document.querySelectorAll('.social-card img').forEach(img => {
+    img.addEventListener('click', function () {
+      const fullscreenImg = document.getElementById('fullscreenImg');
+      fullscreenImg.src = this.src;
+      document.getElementById('fullscreenImage').style.display = 'flex';
+    });
+  });
+
+  function hideFullscreen() {
+    document.getElementById('fullscreenImage').style.display = 'none';
+  }
+</script>
+
+
 
 <!-- Join page for the km Amish for the upcoming events -->
   <!-- Contact Info -->
