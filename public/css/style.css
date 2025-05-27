@@ -701,23 +701,69 @@ textarea {
 
 
     /* .............................this is code of the events section...................................... */
-     .event-card {
-      width: 300px;
-      height: 310px;
-      margin: 15px auto;
-    }
+  .events-card {
+    width: 300px;
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+  }
 
-    .event-card img {
-      height: 250px;
-      object-fit: cover;
-    }
+  .events-card img {
+    width: 100%;
+    height: 75%;
+    object-fit: contain;
+    background-color: #f8f9fa;
+    cursor: pointer;
+  }
 
-    .card-body {
-      display: flex;
-      flex-direction: column;
-      height: 150px;
-      padding: 10px;
-    }
+  .events-card .card-body {
+    height: 25%;
+    padding: 10px;
+    overflow: hidden;
+  }
+
+  .events-card .card-title {
+    font-family: 'Noto Sans Devanagari', 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 4px;
+  }
+
+  .events-card .card-text {
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    color: #555;
+  }
+
+  .fullscreen-image {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 1050;
+  }
+
+  .fullscreen-image img {
+    max-width: 90%;
+    max-height: 90%;
+    object-fit: contain;
+    border: 4px solid #fff;
+    border-radius: 4px;
+    box-shadow: 0 0 12px #000;
+    cursor: zoom-out;
+  }
+
+
 
     /* ..................................This is css of the movements............................................. */
     .movement-header {

@@ -1,5 +1,5 @@
 <x-header>
-  <x-slot name="title">Socila work and Achievements</x-slot>
+  <x-slot name="title">Upcomings events Details</x-slot>
 
   <x-slot name="bodycode">
 
@@ -11,22 +11,44 @@
       <p class="lead">This is latest news updates from the KM. Amish</p>
     </div>
   </header>
+<!-- This is code of the events cards -->
 
-<div class="container">
-    <div class="row justify-content-center">
-        @foreach($event as $event)
-        <div class="col-12 col-sm-6 col-md-4 col-lg-3 d-flex justify-content-center mb-4">
-            <div class="card event-card text-center">
-                <img src="{{ asset($event->image) }}" class="card-img-top" alt="Event Image">
-                <div class="card-body">
-                    <div class="card-title">{{ $event->title }}</div>
-                    <div class="card-text">{{ $event->description }}</div>
-                </div>
-            </div>
+<div class="container my-4">
+  <div class="row justify-content-center">
+    @foreach($event as $event)
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3 d-flex justify-content-center mb-4">
+        <div class="card events-card text-center">
+          <img src="{{ asset($event->image) }}" class="card-img-top" alt="Event Image">
+          <div class="card-body">
+            <h5 class="card-title fw-bold text-danger text-center" style="font-size:12px ">{{ Str::limit($event->title, 45, '...') }}</h5>
+            <p class="card-text text-center" style="font-size:10px ">{{ Str::limit($event->description, 150, '...') }}</p>
+          </div>
         </div>
-        @endforeach
-    </div>
+      </div>
+    @endforeach
+  </div>
 </div>
+
+<!-- Fullscreen Image Modal -->
+<div id="fullscreenImage" class="fullscreen-image" onclick="hideFullscreen()">
+  <img id="fullscreenImg" src="" alt="Fullscreen View">
+</div>
+
+<!-- code of the js -->
+ <script>
+  document.querySelectorAll('.events-card img').forEach(img => {
+    img.addEventListener('click', function () {
+      document.getElementById('fullscreenImg').src = this.src;
+      document.getElementById('fullscreenImage').style.display = 'flex';
+    });
+  });
+
+  function hideFullscreen() {
+    document.getElementById('fullscreenImage').style.display = 'none';
+  }
+</script>
+
+
 
 <!-- Join page for the km Amish for the upcoming events -->
   <!-- Contact Info -->

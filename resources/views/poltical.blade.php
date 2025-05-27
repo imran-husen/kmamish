@@ -19,7 +19,7 @@
       <div class="card polotics-card text-center">
         <img src="{{ $item->image }}" alt="{{ $item->title }}" class="m-1">
         <div class="card-body">
-          <h5 class="card-title fw-bold" style="font-size:12px">{{ Str::limit($item->description, 45, '...') }}</h5>
+          <h5 class="card-title text-danger fw-bold" style="font-size:12px">{{ Str::limit($item->description, 45, '...') }}</h5>
           <p class="card-text" style="font-size:10px">{{ Str::limit($item->description, 150, '...') }}</p>
         </div>
       </div>
