@@ -17,7 +17,7 @@ use App\Models\social;
 use App\Models\movements;
 use App\Models\writing;
 use App\Models\polotics;
-
+use App\Models\regular_events;
 
 
 
@@ -92,6 +92,9 @@ public function dashboard(Request $request)
                 $polotics = polotics::all();
                 $totalpolotics = polotics::count();
 
+                // Semd the all details in the dashboard
+                $reg_image = regular_events::all();
+
                 return view('admin.dashboard', compact(
                     'joinUser',
                     'feedback',
@@ -117,7 +120,8 @@ public function dashboard(Request $request)
                     'writings',
                     'totalwrite',
                     'polotics',
-                    'totalpolotics'
+                    'totalpolotics',
+                    'reg_image'
                 ));
             }
         }
@@ -540,4 +544,45 @@ public function destroy_writings($id)
        return view('admin.success');
     }
 
+
+    // THis is code to uploaded the regular events
+  public function store_regular_events(Request $request)
+    {
+        $request->validate([
+            'imageTitle' => 'required|string|max:255',
+            'imageFile' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+        ]);
+
+        $image = $request->file('imageFile');
+        $imageName = time() . '.' . $image->getClientOriginalExtension();
+        $imagePath = 'regular_events/' . $imageName;
+
+        $image->move(public_path('regular_events'), $imageName); // Save image to public/regular_events
+
+        regular_events::create([
+            'title' => $request->imageTitle,
+            'image' => $imagePath, // Save path in DB
+        ]);
+
+        return view('admin.success'); // Return a view or redirect
+    }
+
+    // Here i am writing the code to the delete regula events image
+    public function destroy_regular_events($id)
+{
+    $image = regular_events::findOrFail($id);
+
+    // Delete image file from storage
+    if ($image->image_path && Storage::disk('public')->exists($image->image_path)) {
+        Storage::disk('public')->delete($image->image_path);
+    }
+
+    // Delete record from database
+    $image->delete();
+
+        return view('admin.success'); // Return a view or redirect
 }
+
+}
+
+

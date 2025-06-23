@@ -12,6 +12,7 @@ use App\Models\social;
 use App\Models\polotics;
 use App\Models\Events;
 use App\Models\movements;
+use App\Models\regular_events;
 
 
 class MainController extends Controller
@@ -24,7 +25,8 @@ class MainController extends Controller
         // i will compact the data on here
         $latestNews = news::latest()->take(3)->get();
         $latestvideos = youtube::latest()->take(3)->get();
-        return view('index',['latestNews' => $latestNews, 'latestvideos' => $latestvideos]);
+        $latestpic = regular_events::latest()->take(5)->get();
+        return view('index',['latestNews' => $latestNews, 'latestvideos' => $latestvideos, 'latestpic' => $latestpic]);
     }
     //Routing for the test page 
     public function about(){

@@ -23,6 +23,7 @@ Route::get('/Latest-Movements-By-KM-Amish',[MainController::class, 'movements'])
 
 
 
+
 // Here i am create routes of the admin panels
 Route::get('/Admin-Login', [AdminController::class, 'login']);
 
@@ -73,6 +74,9 @@ Route::post('/writing/store', [AdminController::class, 'store_writing'])->name('
 //Here i am writing the code of the polotical page
 Route::post('/politics/store', [AdminController::class, 'store_polotics'])->name('politics.store');
 
+// Here i am writing the code for the uplod the image
+Route::post('/upload-image', [AdminController::class, 'store_regular_events'])->name('regular_events.store');
+
 
 
 
@@ -87,6 +91,7 @@ Route::delete('/socials/{id}', [AdminController::class, 'destroy_social'])->name
 Route::delete('/polotics/{id}', [AdminController::class, 'destroy_polotics'])->name('polotics.destroy');
 Route::delete('/moments/{id}', [AdminController::class, 'destroy_movements'])->name('moments.destroy');
 Route::delete('/writings/{id}', [AdminController::class, 'destroy_writings'])->name('writings.destroy');
+Route::delete('/images/{id}', [AdminController::class, 'destroy_regular_events'])->name('images.destroy');
 
 
 

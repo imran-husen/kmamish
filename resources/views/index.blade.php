@@ -229,7 +229,7 @@ Understanding the situation and circumstances of the present society, there is a
 </div>
 
 <!-- This is the code of the hyper link -->
- <h4 class="text-center fw-bold mt-1">Importanat link</h4>
+ <h4 class="text-center fw-bold mt-1 text-danger">Importanat link</h4>
  <p class="text-center">This is the important link of thr KM Amish, where available various types of the reseach and their publication</p>
  <div class="container text-center mb-3">
   <div class="d-flex flex-column flex-md-row justify-content-center align-items-center gap-3">
@@ -253,6 +253,50 @@ Understanding the situation and circumstances of the present society, there is a
 </div>
 
 
+<!-- Here i am going to create a section for the publication writing achievements and scinetific gadgets -->
+
+<div class="container my-2">
+  <h4 class="text-center mb-2 fw-bold text-primary">Latest Event Images</h4>
+   <p class="text-center fw-bold text-success">This photos is recently uploded by admin where the K.M. is recently participate in the  various events</p>
+  <div class="viewport">
+   <div class="cards-wrapper" id="cardsWrapper">
+    @foreach ($latestpic as $pic)
+        <div class="card-item">
+            <img src="{{ asset($pic->image) }}" alt="Event Image">
+        </div>
+    @endforeach
+   </div>
+  </div>
+</div>
+
+<!-- Carousel Script (Auto-slide one card at a time) -->
+<script>
+  (function () {
+    const wrapper = document.getElementById('cardsWrapper');
+    const cardWidth = 320; // 300px + 20px gap
+    let offset = 0;
+
+    function slideCard() {
+      wrapper.style.transform = `translateX(-${cardWidth}px)`;
+
+      setTimeout(() => {
+        const firstCard = wrapper.firstElementChild;
+        wrapper.appendChild(firstCard);
+        wrapper.style.transition = 'none';
+        wrapper.style.transform = 'translateX(0)';
+        void wrapper.offsetWidth; // force reflow
+        wrapper.style.transition = 'transform 0.5s ease';
+      }, 500);
+    }
+
+    setInterval(slideCard, 2500);
+  })();
+</script>
+
+
+<!-- Here i am going to write the code of the faimly and educatiob backround of the kmamaish -->
+ 
+
 
 
 <!-- Feedback Form Section -->
@@ -260,7 +304,7 @@ Understanding the situation and circumstances of the present society, there is a
   <div class="row justify-content-center">
     <div class="col-md-8">
       <div class="form-box1 p-4 shadow rounded bg-white">
-        <h3 class="text-center mb-4 fw-bold text-danger">Give Us Your Feedback</h3>
+        <h3 class="text-center mb-4 fw-bold text-danger">Give Us Your Suggestion</h3>
 
         @if(session('success_feedback'))
         <div class="alert alert-success">{{ session('success_feedback') }}</div>
@@ -285,7 +329,7 @@ Understanding the situation and circumstances of the present society, there is a
           </div>
 
           <div class="text-center">
-            <button type="submit" class="btn btn-success px-4">Submit Feedback</button>
+            <button type="submit" class="btn btn-success px-4">Submit Suggestion</button>
           </div>
         </form>
 

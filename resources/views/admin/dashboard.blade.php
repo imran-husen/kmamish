@@ -45,7 +45,8 @@
     <a href="#" data-section="political"><i class="fas fa-landmark me-2"></i> Political Achievements</a>
     <a href="#" data-section="newsletter"><i class="fas fa-envelope me-2"></i> Newsletter</a>
     <a href="#" data-section="events"><i class="fas fa-calendar-alt me-2"></i> Events</a>
-    <a href="#" data-section="moments"><i class="fas fa-camera-retro me-2"></i>Movement</a><br><br>
+    <a href="#" data-section="moments"><i class="fas fa-camera-retro me-2"></i>Movement</a>
+    <a href="#" data-section="regular"><i class="fas fa-calendar-alt me-2"></i>Regular Events</a><br><br>
   </div>
 </div>
 
@@ -846,10 +847,79 @@
             @endforelse
         </tbody>
     </table>
-
-
-
 </template>
+
+
+  <!-- this is the regular events that uploded by the admin -->
+  <template id="regular">
+      <h4 class="text-center text-danger fw-bold" >Regular events photos</h4>
+      <p class="text-center">This is the regular events photos that should be uploded by you</p>
+
+      <!-- I am creating form to take image and title of image -->
+       <div class="container mt-2">
+  <h2 class="text-center mb-2">📤 Upload Event Image</h2>
+
+    <form action="{{ route('regular_events.store') }}" method="POST" enctype="multipart/form-data" class="border p-4 rounded shadow-sm bg-white">
+    @csrf
+
+    <div class="mb-3">
+        <label for="imageTitle" class="form-label">Image Title</label>
+        <input type="text" class="form-control" id="imageTitle" name="imageTitle" required>
+    </div>
+
+    <div class="mb-3">
+        <label for="imageFile" class="form-label">Upload Image</label>
+        <input class="form-control" type="file" id="imageFile" name="imageFile" required>
+    </div>
+
+    <button type="submit" class="btn btn-primary w-100">Submit</button>
+</form>
+
+
+
+</div>
+
+<!-- This is table where delete and other operation will be perform -->
+
+ <p class="text-center mt-2 fw-bold">This is uploaded regular events photos where admin can perform delete and upload the image</p>
+   <table class="table table-bordered table-hover table-striped text-center align-middle">
+        <thead class="table-dark">
+            <tr>
+                <th>Sr. No.</th>
+                <th>Title</th>
+                <th>Image</th>
+                <th>Date</th>
+                <th>Delete</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach ($reg_image as $index => $image)
+                      <tr>
+                        <td>{{ $index + 1 }}</td>
+                        <td> {{ $image->title }}</td>
+                        <td>
+                            <img src="{{ asset('storage/' . $image->image_path) }}" alt="Image" class="img-thumbnail" style="max-width: 100px;">
+                        </td>
+                        <td>{{ $image->created_at->format('Y-m-d') }}</td>
+                         <td>
+                          <form action="{{ route('images.destroy', $image->id) }}" method="POST" onsubmit="return confirm('Are you sure you want to delete this?')">
+                              @csrf
+                              @method('DELETE')
+                              <button type="submit" class="btn btn-danger btn-sm">Delete</button>
+                          </form>
+                        </td>
+                      </tr>
+            @endforeach
+
+            <!-- Add more rows dynamically -->
+        </tbody>
+    </table>
+
+    </template>
+
+
+
+
 <!-- Script -->
 <script>
   function toggleSidebar() {
