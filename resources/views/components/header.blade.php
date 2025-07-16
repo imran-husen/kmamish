@@ -92,11 +92,15 @@
                 </li>
 
                 <!-- Students Dropdown -->
-                <li class="nav-item">
-                    <a class="nav-link " href="{{ url('/About-Us') }}"> About-us </a>
-                    
+                 <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="studentDropdown" role="button" data-bs-toggle="dropdown">
+                        About-Us
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="{{ url('/About-Us') }}">About of K.M. Amish</a></li>
+                        <li><a class="dropdown-item" href="{{ url('/Family-bg-of-Amish') }}">Family Background</a></li>
+                    </ul>
                 </li>
-
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="studentDropdown" role="button" data-bs-toggle="dropdown">
                         Achievments
@@ -104,6 +108,7 @@
                     <ul class="dropdown-menu">
                         <li><a class="dropdown-item" href="{{ url('/Educational-Achievements')}}">Educational-Achievements </a></li>
                         <li><a class="dropdown-item" href="{{ url('/Writings-Achievements') }}">Writing and publication</a></li>
+                        <li><a class="dropdown-item" href="{{ url('/Latest-Scientific-Gadgets') }}">Scientific Gadgets</a></li>
                         <li><a class="dropdown-item" href="{{ url('/Social-Working-and-Achievements')}}">Social Work and Achievements</a></li>
                         <li><a class="dropdown-item" href="{{ url('/Polotical-Working-and-Achievements')}}">Polotical Achievements</a></li>
                     </ul>
@@ -114,8 +119,8 @@
                     </a>
                     <ul class="dropdown-menu">
                         <li><a class="dropdown-item" href="{{ url('/News-Gallery')}}">News Gallery</a></li>
-                        <li><a class="dropdown-item" href="{{ url('/Grand-Events-By-KM-Amish')}}">Events</a></li>
-                        <li><a class="dropdown-item" href="{{ url('/Latest-Movements-By-KM-Amish') }}">Moments</a></li>
+                        <li><a class="dropdown-item" href="{{ url('/Grand-Events-By-KM-Amish')}}">Events Gallery</a></li>
+                        <li><a class="dropdown-item" href="{{ url('/Latest-Movements-By-KM-Amish') }}">Moments Gallery</a></li>
                         <li><a class="dropdown-item" href="{{ url('/Video-Gallery')}}">Videos Gallery</a></li>
                     </ul>
                 </li>

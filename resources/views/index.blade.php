@@ -1,7 +1,8 @@
 <x-header>
   <x-slot name="title">Home</x-slot>
-
   <x-slot name="bodycode">
+
+  
     <!-- I am writing the create the hesder section -->
      <!-- Bootstrap 5 Header Clone with Transparent Background -->
 <header id="top-header" class="mb-1">
@@ -295,11 +296,49 @@ Understanding the situation and circumstances of the present society, there is a
 
 
 <!-- Here i am going to write the code of the faimly and educatiob backround of the kmamaish -->
- 
+
+
+
+<!-- Here i ma going to write the about of the km amish family bagrouund -->
+ <!-- About Us Section -->
+<section id="about" class="py-5 bg-light">
+  <div class="container">
+    <div class="row align-items-center">
+      <!-- Profile Image -->
+      <div class="col-lg-4 mb-4 mb-lg-0 text-center">
+        <img src="{{ asset('/image/main photo.jpg' ) }}" class="img-fluid rounded-circle shadow" alt="K. M. Amish" style="height:230px; width:230px;">
+      </div>
+
+      <!-- Profile Text -->
+      <div class="col-lg-8">
+        <h3 class="mb-1 fw-bold text-danger">About K. M. Amish</h3>
+        <p><strong>Full Name:</strong> Mohd Amish Khan</p>
+        <p><strong>Date of Birth:</strong> 30 May 1991</p>
+        <p><strong>Birthplace:</strong> Village Usari Piperjhala, Lakhimpur Kheri, Uttar Pradesh, India</p>
+
+        <p>
+          K. M. Amish is a proud descendant of the noble lineage of Mughal Pathan Yusufzai rulers with deep historical roots in North India and Afghanistan. His ancestry traces back to the famed Nawabs and Lambardars of Bijnor and Ruhelkhand.
+        </p>
+
+        <p>
+          His great heritage includes leaders such as Nawab Governor Rahmat Khan, Nawab Riyashatdar Shahamt Khan, and Lambardar Shakur Khan. This legacy of leadership and governance has deeply influenced Amish’s values of dedication, honor, and service to community.
+        </p>
+
+        <p>
+          With a foundation rooted in tradition and a forward-looking mindset, K. M. Amish continues to carry his family’s values while embracing modern opportunities and growth.
+        </p>
+
+        <!-- Optional Call-to-Action Button -->
+        <a href="#contact" class="btn btn-primary mt-3">Get in Touch</a>
+      </div>
+    </div>
+  </div>
+</section>
 
 
 
 <!-- Feedback Form Section -->
+<!--  
 <div class="container mt-4 mb-2">
   <div class="row justify-content-center">
     <div class="col-md-8">
@@ -336,7 +375,7 @@ Understanding the situation and circumstances of the present society, there is a
       </div>
     </div>
   </div>
-</div>
+</div> -->
 
 
 

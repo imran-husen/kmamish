@@ -19,6 +19,8 @@ Route::get('/Social-Working-and-Achievements',[MainController::class, 'social'])
 Route::get('/Polotical-Working-and-Achievements',[MainController::class, 'polotical']);
 Route::get('/Grand-Events-By-KM-Amish',[MainController::class, 'events']);
 Route::get('/Latest-Movements-By-KM-Amish',[MainController::class, 'movements']);
+Route::get('/Latest-Scientific-Gadgets',[MainController::class, 'scientific']);
+Route::get('/Family-bg-of-Amish',[MainController::class, 'family']);
 
 
 
