@@ -134,14 +134,4 @@ class MainController extends Controller
         return view('movements', compact('move'));
     }
 
-    // This is the routing of the scientific gadgets
-    public function scientific(){
-        return view('scientific');
-    }
-    
-
-    //This is the routing of the family bg
-    public function family(){
-        return view('familybg');
-    }
 }

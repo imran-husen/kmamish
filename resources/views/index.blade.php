@@ -103,42 +103,43 @@
 </section>
 
 
-<!-- Here i am going to create a best box for the ideology of the Bhu ayami party -->
-  <div class="container my-4">
-    <div class="ideology-container">
-
-      <div class="card ideology-card">
-        <div class="ideology-heading text-center" style="color: yellow; text-shadow:1px 2px black">
-          Ideology
-        </div>
-        <div class="card1-body">
-          <p class="card1-text text-center mt-1">
-            Before defining multidimensional personality or Multidimensionalism, let us pay special attention to the following notion:The origin of the word Multidimensional comes from dimensions, dimensions, directions, For example, if we talk about Multidimensional, then we see that we are living in three directions, which we can speak in forward, backward, left, up, down. For example, if an insect is allowed to crawl on a thread, it will experience only one dimension, similarly if it is made to sit on a table, it will experience two dimensions if the same insect is allowed to fly. If he is free, then he will be able to experience the three directions.
-            <span class="collapse" id="readMore1">
-              Similarly, the definition of Multidimensionalism is being given, taking into account Multidimensional education, Multidimensional technology and Multidisciplinary research.
-If we talk about a Multidimensional personality, then one who has the ability to talk and act on many aspects at the same time which is referred to with any aptitude or conditions. Ability, Multidimensional curiosity, Multidimensional activities, Multidimensional limitless personality, Multidimensional spiritual growth, and Multidimensional personal development, Multidimensional knowledge, and universality of skills is the personality of a Multidimensional rationalist who continues to move forward in the bottomless ocean.
-Given the multifaceted talent
-It displays the versatility of Multidimensional knowledge, expanding the boundaries of versatility, freedom to choose the application point of effort, ability to learn from experiences, freedom from passivity and boringness, enjoyment from creativity and self-expression, envelopment of the surrounding environment, lives.
-Versatility requires that one strives to cultivate his personality by flaunting his knowledge, skills, educational taste, practice, labour, practical tools, of various fields.
-In short, it can be said that such a personality who has many dimensions, many thoughts, many levels, many angles, many directions, many magnitudes, many concepts, has a precise guidance.
-And last every person is the owner of a Multidimensional personality, without understanding its positive negative importance and identity, it seems impossible to bring peace in the society or the world, every Multidimensional personality is responsible for the change in the global social conditions.
-For example, if you and I are a Multidimensional personality and all my identities are Multidimensional in the right directions, then you and I will certainly be able to make a better miraculous change in the direction of peace and development in the world.
-If the direction is changed by mistake in making continuous progress, then surely the world will be bound to reach the point of collapse.
-(For example, Multidimensional science has shown by inventing the atomic bomb) And surely the Multidimensional personality will go on getting destroyed.
-If any work is done continuously without mistake and without difficulty, then it is considered an indicator of intellectual ability.
-Understanding the situation and circumstances of the present society, there is a need to make changes in education technology and research with important Multidimensional thinking
-            </span>
-          </p>
-            <div class="d-flex justify-content-center my-1">
-                 <a class="btn btn-primary btn-sm" data-bs-toggle="collapse" href="#readMore1" role="button" aria-expanded="false" aria-controls="readMore1">
-                    Read More
-                 </a>
-             </div>
+<!-- Ideology Box for Bhu Ayami Party -->
+<div class="container my-4">
+  <div class="ideology-container">
+    <div class="card border-0" style="background-color: transparent;">
+      <h1 class="ideology-heading text-center text-primary fw-bold" style="text-shadow: 1px 2px 4px black;">
+        Ideology
+      </h1>
+      <div class="card-body" style="background-color: transparent;">
+        <p class="text-center mt-0 text-dark fw-bold">
+          Before defining multidimensional personality or Multidimensionalism, let us pay special attention to the following notion:
+          The origin of the word Multidimensional comes from dimensions, dimensions, directions, For example, if we talk about Multidimensional, then we see that we are living in three directions, which we can speak in forward, backward, left, up, down. For example, if an insect is allowed to crawl on a thread, it will experience only one dimension, similarly if it is made to sit on a table, it will experience two dimensions if the same insect is allowed to fly. If he is free, then he will be able to experience the three directions.
+          <span class="collapse" id="readMore1">
+            Similarly, the definition of Multidimensionalism is being given, taking into account Multidimensional education, Multidimensional technology and Multidisciplinary research.
+            If we talk about a Multidimensional personality, then one who has the ability to talk and act on many aspects at the same time which is referred to with any aptitude or conditions. Ability, Multidimensional curiosity, Multidimensional activities, Multidimensional limitless personality, Multidimensional spiritual growth, and Multidimensional personal development, Multidimensional knowledge, and universality of skills is the personality of a Multidimensional rationalist who continues to move forward in the bottomless ocean.
+            Given the multifaceted talent
+            It displays the versatility of Multidimensional knowledge, expanding the boundaries of versatility, freedom to choose the application point of effort, ability to learn from experiences, freedom from passivity and boringness, enjoyment from creativity and self-expression, envelopment of the surrounding environment, lives.
+            Versatility requires that one strives to cultivate his personality by flaunting his knowledge, skills, educational taste, practice, labour, practical tools, of various fields.
+            In short, it can be said that such a personality who has many dimensions, many thoughts, many levels, many angles, many directions, many magnitudes, many concepts, has a precise guidance.
+            And last every person is the owner of a Multidimensional personality, without understanding its positive negative importance and identity, it seems impossible to bring peace in the society or the world, every Multidimensional personality is responsible for the change in the global social conditions.
+            For example, if you and I are a Multidimensional personality and all my identities are Multidimensional in the right directions, then you and I will certainly be able to make a better miraculous change in the direction of peace and development in the world.
+            If the direction is changed by mistake in making continuous progress, then surely the world will be bound to reach the point of collapse.
+            (For example, Multidimensional science has shown by inventing the atomic bomb) And surely the Multidimensional personality will go on getting destroyed.
+            If any work is done continuously without mistake and without difficulty, then it is considered an indicator of intellectual ability.
+            Understanding the situation and circumstances of the present society, there is a need to make changes in education technology and research with important Multidimensional thinking
+          </span>
+        </p>
+        <div class="d-flex justify-content-center my-1">
+          <a class="btn btn-outline-primary btn-sm" data-bs-toggle="collapse" href="#readMore1" role="button" aria-expanded="false" aria-controls="readMore1">
+            Read More
+          </a>
         </div>
       </div>
-
     </div>
   </div>
+</div>
+
+
 
 <!-- Social Icons - Visible on Mobile Only -->
 <div class="d-md-none">
@@ -293,92 +294,6 @@ Understanding the situation and circumstances of the present society, there is a
     setInterval(slideCard, 2500);
   })();
 </script>
-
-
-<!-- Here i am going to write the code of the faimly and educatiob backround of the kmamaish -->
-
-
-
-<!-- Here i ma going to write the about of the km amish family bagrouund -->
- <!-- About Us Section -->
-<section id="about" class="py-5 bg-light">
-  <div class="container">
-    <div class="row align-items-center">
-      <!-- Profile Image -->
-      <div class="col-lg-4 mb-4 mb-lg-0 text-center">
-        <img src="{{ asset('/image/main photo.jpg' ) }}" class="img-fluid rounded-circle shadow" alt="K. M. Amish" style="height:230px; width:230px;">
-      </div>
-
-      <!-- Profile Text -->
-      <div class="col-lg-8">
-        <h3 class="mb-1 fw-bold text-danger">About K. M. Amish</h3>
-        <p><strong>Full Name:</strong> Mohd Amish Khan</p>
-        <p><strong>Date of Birth:</strong> 30 May 1991</p>
-        <p><strong>Birthplace:</strong> Village Usari Piperjhala, Lakhimpur Kheri, Uttar Pradesh, India</p>
-
-        <p>
-          K. M. Amish is a proud descendant of the noble lineage of Mughal Pathan Yusufzai rulers with deep historical roots in North India and Afghanistan. His ancestry traces back to the famed Nawabs and Lambardars of Bijnor and Ruhelkhand.
-        </p>
-
-        <p>
-          His great heritage includes leaders such as Nawab Governor Rahmat Khan, Nawab Riyashatdar Shahamt Khan, and Lambardar Shakur Khan. This legacy of leadership and governance has deeply influenced Amish’s values of dedication, honor, and service to community.
-        </p>
-
-        <p>
-          With a foundation rooted in tradition and a forward-looking mindset, K. M. Amish continues to carry his family’s values while embracing modern opportunities and growth.
-        </p>
-
-        <!-- Optional Call-to-Action Button -->
-        <a href="#contact" class="btn btn-primary mt-3">Get in Touch</a>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-
-<!-- Feedback Form Section -->
-<!--  
-<div class="container mt-4 mb-2">
-  <div class="row justify-content-center">
-    <div class="col-md-8">
-      <div class="form-box1 p-4 shadow rounded bg-white">
-        <h3 class="text-center mb-4 fw-bold text-danger">Give Us Your Suggestion</h3>
-
-        @if(session('success_feedback'))
-        <div class="alert alert-success">{{ session('success_feedback') }}</div>
-        @endif
-
-        <form action="{{ route('feedback.store') }}" method="POST">
-          @csrf
-          <div class="row mb-3">
-            <div class="col-md-6">
-              <label for="fbName" class="form-label">Name</label>
-              <input type="text" class="form-control" name="name" id="fbName" placeholder="Your name" required>
-            </div>
-            <div class="col-md-6">
-              <label for="fbPhone" class="form-label">Phone Number</label>
-              <input type="tel" class="form-control" name="phone" id="fbPhone" placeholder="Your phone number" required>
-            </div>
-          </div>
-
-          <div class="mb-3">
-            <label for="fbMessage" class="form-label">Your Feedback</label>
-            <textarea class="form-control" name="message" id="fbMessage" rows="4" placeholder="Share your thoughts..." required></textarea>
-          </div>
-
-          <div class="text-center">
-            <button type="submit" class="btn btn-success px-4">Submit Suggestion</button>
-          </div>
-        </form>
-
-      </div>
-    </div>
-  </div>
-</div> -->
-
-
-
 <!-- Here i am creating the contacts idons to contact the km amish sir -->
   <section class="text-center mt-3">
     <h4 class="fw-bold" >Direct call, Whattsapp and E-mail</h4>
