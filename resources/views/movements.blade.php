@@ -6,29 +6,36 @@
   <!-- This is teh body codes of the main section -->
     <header class="movement-header">
     <div class="container">
-      <h1>Rise for Change: A Movement for the People</h1>
-      <p>Together, we stand for justice, equality, and a brighter future. Join the movement for a better tomorrow.</p>
-      <a href="#join" class="btn btn-warning text-dark fw-bold">Join the Movement</a>
+      <h1>Rise for Change: A Invent for the People</h1>
+      <p>Together, we stand for science, technology, and a brighter future. Join the research team for a better tomorrow.</p>
+      <a href="{{ url('/Contact-Us') }}" class="btn btn-warning text-dark fw-bold">Join Research Team</a>
     </div>
   </header>
 
 
   <!-- This is the dynamics cards -->
-<div class="container my-4 ">
+<div class="container my-4">
   <div class="row justify-content-center g-4">
-    @foreach( $move as $item)
-      <div class="col-12 col-md-3 d-flex justify-content-center ">
-        <div class="card writer-card text-center mt-2">
-          <img src="{{ $item->image }}" class="card-img-top" alt="{{ $item->title }}">
+    @foreach($move as $item)
+      <div class="col-12 col-md-3 d-flex justify-content-center">
+        <div class="card gadget-card text-center shadow-sm" style="width: 100%; max-width: 300px; height:350px; border-radius: 15px; transition: transform 0.3s, box-shadow 0.3s;">
+          <div style="height: 200px; overflow: hidden; border-top-left-radius: 15px; border-top-right-radius: 15px; padding:5px;">
+            <img src="{{ $item->image }}" alt="{{ $item->title }}" 
+              class="card-img-top" 
+              style="height: 100%; width: 100%; object-fit: cover; transition: transform 0.3s;">
+          </div>
           <div class="card-body">
-            <h5 class="card-title">{{ $item->title }}</h5>
-            <p class="card-text"  style="font-size:15px">{{ Str::limit($item->description, 150, '...') }}</p>
+            <h5 class="card-title fw-bold" style="font-family: 'Arima', system-ui;">
+              {{ \Illuminate\Support\Str::limit($item->title, 25, '...') }}
+            </h5>
+            <p class="card-text" style="font-size: 10px; font-family: 'Arima', system-ui;">
+              {{ \Illuminate\Support\Str::limit($item->description, 150, '...') }}
+            </p>
           </div>
         </div>
       </div>
     @endforeach
   </div>
-</div>
 
 <!-- Join page for the km Amish for the upcoming events -->
   <!-- Contact Info -->

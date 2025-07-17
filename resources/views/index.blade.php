@@ -104,7 +104,7 @@
 
 
 <!-- Ideology Box for Bhu Ayami Party -->
-<div class="container my-4">
+<div class="container my-2">
   <div class="ideology-container">
     <div class="card border-0" style="background-color: transparent;">
       <h1 class="ideology-heading text-center text-primary fw-bold" style="text-shadow: 1px 2px 4px black;">

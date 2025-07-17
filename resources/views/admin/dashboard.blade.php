@@ -45,7 +45,7 @@
     <a href="#" data-section="political"><i class="fas fa-landmark me-2"></i> Political Achievements</a>
     <a href="#" data-section="newsletter"><i class="fas fa-envelope me-2"></i> Newsletter</a>
     <a href="#" data-section="events"><i class="fas fa-calendar-alt me-2"></i> Events</a>
-    <a href="#" data-section="moments"><i class="fas fa-camera-retro me-2"></i>Movement</a>
+    <a href="#" data-section="moments"><i class="fas fa-microscope me-2"></i>Scientific Gadgets</a>
     <a href="#" data-section="regular"><i class="fas fa-calendar-alt me-2"></i>Regular Events</a><br><br>
   </div>
 </div>
@@ -153,9 +153,9 @@
     </div>
     <div class="col-md-4">
       <div class="info-card notification-card">
-        <h5 class="card-title">Uploded Movements & Campiegn </h5>
-        <p class="card-subtitle">Total Uploded movements by the admin</p>
-      <span class="card-badge bg-warning text-dark">{{  $totalmove }} Uplod Movements</span>
+        <h5 class="card-title">Uploded Scientific Gadgets </h5>
+        <p class="card-subtitle">Total Uploded Scientific Gadgets by the admin</p>
+      <span class="card-badge bg-warning text-dark">{{  $totalmove }} Uplod Scientific Gadgets</span>
       </div>
     </div>
 </div>
@@ -796,29 +796,29 @@
 
 <!-- This is the page of the various types of the moments -->
   <template id="moments">
- <h4 class="text-center text-danger fw-bold" >Movement by run by admin</h4>
-  <p class="text-center fs-6">By form you can submit where movements that will be shown in the frontan  </p>
+ <h4 class="text-center text-danger fw-bold" >Scientific Gadgets Uploading panel</h4>
+  <p class="text-center fs-6">By using the panels you can upload scietific gadgets which is invented by you</p>
    <form action="{{ route('moments.store') }}" method="POST" enctype="multipart/form-data" style="border:1px solid grey; border-radius:15px; padding:20px">
         @csrf
         <div class="mb-3">
-            <label>Upload moments Image</label>
+            <label>Upload Gadgets Image</label>
             <input type="file" name="image" class="form-control" required>
         </div>
         <div class="mb-3">
-            <label>Moments Title</label>
+            <label>Scientific Gadgets Title</label>
             <input type="text" name="title" class="form-control" placeholder="moments Title" required>
         </div>
         <div class="mb-3">
-            <label>Write Moments Description</label>
+            <label>Write Description</label>
             <textarea class="form-control" name="description" rows="4" placeholder="Moments description here..." required></textarea>
         </div>
-        <button class="btn btn-primary">Submit Event</button>
+        <button class="btn btn-primary">Submit Scientific Gadgets</button>
     </form>
 
 
     <!-- here i will shown the data of the movements -->
-      <h4 class="text-center text-primary mt-2 fw-bold"> Uploded Movements and Campiegn</h4>
-     <p class="text-center fs-6"> This is total uploded movements related achievements by the admn in the database</p>
+      <h4 class="text-center text-primary mt-2 fw-bold"> Uploded Scientific Gadgets</h4>
+     <p class="text-center fs-6"> This is total uploded Scientific Gadgets related achievements by the admn in the database</p>
       <table class="table table-bordered">
         <thead>
             <tr>
@@ -843,7 +843,7 @@
                     </td>
                 </tr>
             @empty
-                <tr><td colspan="4" class="text-center">No moments uploaded yet.</td></tr>
+                <tr><td colspan="4" class="text-center">No Scientific Gadgets uploaded yet.</td></tr>
             @endforelse
         </tbody>
     </table>

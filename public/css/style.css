@@ -604,32 +604,160 @@ textarea {
     }
 
     /* ............................css code of the about us section ......................... */
-    .section-heading {
-      color: #0d6efd;
-      font-weight: bold;
-      margin-bottom: 15px;
-    }
-    .about-section {
-      background-color: #ffffff;
-      padding: 50px 20px;
-      border-radius: 10px;
-      margin-bottom: 30px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.05);
-    }
-    .about-section:nth-child(even) {
-      background-color: #eaf1fb;
-    }
-    .highlight {
-      color: #0d6efd;
-      font-weight: 600;
-    }
-    .btn-learn {
-      background-color: #0d6efd;
-      color: white;
-    }
-    .btn-learn:hover {
-      background-color: #084298;
-    }
+    .section-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-shadow: 1px 2px 3px rgba(0,0,0,0.2);
+}
+
+.about-box {
+  background: #f9f9f9;
+  border-radius: 15px;
+  padding: 25px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  height: 100%;
+}
+
+.about-box:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+.box-title {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  color: #2c3e50;
+  font-weight: bold;
+  position: relative;
+}
+
+.box-title::after {
+  content: '';
+  display: block;
+  width: 50px;
+  height: 3px;
+  background: #007bff;
+  margin-top: 6px;
+}
+
+.about-box ul {
+  padding-left: 18px;
+}
+
+.about-box ul li {
+  margin-bottom: 8px;
+  list-style: disc;
+}
+
+.highlight {
+  color: #007bff;
+  font-weight: bold;
+}
+
+
+.timeline-section {
+  padding: 60px 20px;
+  background-color: #f7f9fb;
+  border-radius: 20px;
+}
+
+.timeline-heading {
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #032a51;
+  margin-bottom: 50px;
+}
+
+.timeline {
+  position: relative;
+  max-width: 1100px;
+  margin: auto;
+}
+
+.timeline::after {
+  content: '';
+  position: absolute;
+  width: 4px;
+  background-color: #3498db;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  margin-left: -2px;
+}
+
+.timeline-item {
+  padding: 20px 40px;
+  position: relative;
+  width: 50%;
+}
+
+.timeline-item::after {
+  content: '';
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  right: -13px;
+  background-color: #fff;
+  border: 4px solid #3498db;
+  top: 20px;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.timeline-item.left {
+  left: 0;
+}
+
+.timeline-item.right {
+  left: 50%;
+}
+
+.timeline-content {
+  padding: 20px 25px;
+  background-color: white;
+  position: relative;
+  border-radius: 6px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+.timeline-content h3 {
+  margin-top: 0;
+  color: #007bff;
+  font-weight: 600;
+}
+
+.timeline-content ul {
+  padding-left: 20px;
+  margin: 0;
+}
+
+.timeline-content ul li {
+  margin-bottom: 6px;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .timeline::after {
+    left: 30px;
+  }
+
+  .timeline-item {
+    width: 100%;
+    padding-left: 70px;
+    padding-right: 25px;
+  }
+
+  .timeline-item.right {
+    left: 0%;
+  }
+
+  .timeline-item::after {
+    left: 15px;
+  }
+}
+
 
     /* ......................This is css code of the contact us............................ */
     .contact-container {
@@ -775,6 +903,16 @@ textarea {
       margin-top: 5px;
       font-size: 1rem;
     }
+
+    /* Here i am writing the code for the dynamics cards */
+     .gadget-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  }
+
+  .gadget-card:hover img {
+    transform: scale(1.05);
+  }
 
     /* .............Here i am going to the write the code of the social section........ */
     .social-card {

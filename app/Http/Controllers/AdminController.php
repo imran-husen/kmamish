@@ -198,7 +198,7 @@ public function store_news(Request $request)
         $imagePath = 'news_images/' . $filename;
     }
 
-    News::create([
+    News::create([  
         'title' => $request->title,
         'description' => $request->description,
         'image' => $imagePath,
