@@ -98,7 +98,7 @@
                     </a>
                     <ul class="dropdown-menu">
                         <li><a class="dropdown-item" href="{{ url('/About-Us') }}">About of K.M. Amish</a></li>
-                        <li><a class="dropdown-item" href="{{ url('/Family-bg-of-Amish') }}">Family Background</a></li>
+                        <li><a class="dropdown-item" href="{{  route('family')  }}">Family Background</a></li>
                     </ul>
                 </li>
                 <li class="nav-item dropdown">

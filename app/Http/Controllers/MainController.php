@@ -134,4 +134,10 @@ class MainController extends Controller
         return view('movements', compact('move'));
     }
 
+    // This is routing of the family bg 
+     public function family()
+    {
+        return view('familybg');
+    }
+
 }

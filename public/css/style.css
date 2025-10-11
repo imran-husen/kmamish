@@ -980,3 +980,95 @@ textarea {
 
     /* Here i have write the code for the family bg of the km Amish */
     
+    .family-section {
+      padding: 60px 20px;
+      background: #fff;
+      position: relative;
+    }
+    .section-title {
+      text-align: center;
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: #2c3e50;
+      margin-bottom: 50px;
+    }
+    .timeline {
+      position: relative;
+      max-width: 900px;
+      margin: auto;
+    }
+    .timeline::after {
+      content: '';
+      position: absolute;
+      width: 6px;
+      background-color: #2c3e50;
+      top: 0;
+      bottom: 0;
+      left: 50%;
+      margin-left: -3px;
+      border-radius: 5px;
+    }
+    .timeline-card {
+      padding: 20px 40px;
+      position: relative;
+      background: inherit;
+      width: 50%;
+    }
+    .timeline-card.left {
+      left: 0;
+    }
+    .timeline-card.right {
+      left: 50%;
+    }
+    .timeline-card::after {
+      content: '';
+      position: absolute;
+      width: 25px;
+      height: 25px;
+      right: -12px;
+      background-color: #fff;
+      border: 4px solid #2c3e50;
+      top: 15px;
+      border-radius: 50%;
+      z-index: 1;
+    }
+    .timeline-card.right::after {
+      left: -12px;
+    }
+    .timeline-content {
+      background: #ffffff;
+      padding: 25px;
+      border-radius: 15px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+      transition: all 0.3s ease;
+    }
+    .timeline-content:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+    }
+    .timeline-content h4 {
+      color: #2c3e50;
+      font-weight: 700;
+    }
+    .timeline-content p {
+      margin: 5px 0;
+      font-size: 0.95rem;
+      color: #555;
+    }
+    @media screen and (max-width: 768px) {
+      .timeline::after {
+        left: 31px;
+      }
+      .timeline-card {
+        width: 100%;
+        padding-left: 70px;
+        padding-right: 25px;
+      }
+      .timeline-card.right {
+        left: 0%;
+      }
+      .timeline-card::after {
+        left: 18px;
+      }
+    }
+    

@@ -19,10 +19,11 @@ Route::get('/Social-Working-and-Achievements',[MainController::class, 'social'])
 Route::get('/Polotical-Working-and-Achievements',[MainController::class, 'polotical']);
 Route::get('/Grand-Events-By-KM-Amish',[MainController::class, 'events']);
 Route::get('/Latest-Movements-By-KM-Amish',[MainController::class, 'movements']);
+Route::get('/family', [MainController::class, 'family'])->name('family');
 
 
 
-
+// This is the routing of the Dynamics page of the kmamaish Sir
 
 // Here i am create routes of the admin panels
 Route::get('/Admin-Login', [AdminController::class, 'login']);
