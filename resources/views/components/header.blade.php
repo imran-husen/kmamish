@@ -140,47 +140,49 @@
 
 <!-- This is the body section of the page -->
 {{$bodycode}}
-
-<footer class="text-white pt-5 pb-4">
+<footer class="text-white pt-5 pb-4" style="background-color: #111;">
   <div class="container text-md-left">
     <div class="row text-md-left">
 
       <!-- Menu Section -->
-      <div class="col-md-3 col-lg-3 col-xl-3 mx-auto">
+      <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mb-4">
         <h5 class="text-uppercase fw-bold mb-4">Menu</h5>
         <ul class="list-unstyled">
           <li><a href="#" class="text-decoration-none text-white-50 d-block mb-2">My Thoughts</a></li>
           <li><a href="#" class="text-decoration-none text-white-50 d-block mb-2">My Vision</a></li>
           <li><a href="#" class="text-decoration-none text-white-50 d-block mb-2">My Journey</a></li>
           <li><a href="#" class="text-decoration-none text-white-50 d-block mb-2">Videos</a></li>
-          <li><a href="#" class="text-decoration-none text-white-50 d-block mb-2">News</a></li>
-          <li><a href="#" class="text-decoration-none text-white-50 d-block">Get in Touch</a></li>
+          <li><a href="#" class="text-decoration-none text-white-50 d-block mb-2">Get in Touch</a></li>
         </ul>
       </div>
 
-      <!-- Newsletter Section -->
-      <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
-        <h5 class="text-uppercase fw-bold mb-1">Newsletter</h5>
-        <form class="d-flex flex-column" method="POST" action="{{ route('subscribe') }}">
-             @csrf
-            <input type="email" name="email" class="form-control mb-2 rounded-3" placeholder="Enter your email" required>
-            <button class="btn btn-outline-light btn-sm rounded-3" type="submit">Subscribe</button>
-        </form>
+      <!-- Contact & Address Section -->
+      <div class="col-md-9 col-lg-9 col-xl-9 mx-auto">
+        <h5 class="text-uppercase fw-bold mb-4">Contact Information</h5>
 
-        @if(session('success_email'))
-          <div class="alert alert-success mt-2">{{ session('success_email') }}</div>
-        @endif
-      </div>
+        <div class="row">
+          <!-- Primary Address -->
+          <div class="col-md-6 mb-4">
+            <h6 class="fw-bold text-light">Head Office</h6>
+            <p><i class="fas fa-map-marker-alt me-2"></i> Lucknow, Uttar Pradesh</p>
+            <p><i class="fas fa-home me-2"></i> H No. 116, Hargaon Rd, Usari Piperjhala</p>
+            <p><i class="fas fa-phone me-2"></i> +91 9918422098</p>
+            <p><i class="fas fa-envelope me-2"></i> president@bahuayamiparty.in</p>
+          </div>
 
-      <!-- Contact & Social Section -->
-      <div class="col-md-5 col-lg-4 col-xl-4 mx-auto mt-3">
-        <h5 class="text-uppercase fw-bold mb-4">Contact Info</h5>
-        <p><i class="fas fa-map-marker-alt me-2"></i> Lucknow, Uttar Pradesh</p>
-        <p><i class="fas fa-home me-2"></i> H No. 116, Hargaon Rd, Usari Piperjhala</p>
-        <p><i class="fas fa-phone me-2"></i> +91 9918422098</p>
-        <p><i class="fas fa-envelope me-2"></i> president@bahuayamiparty.in</p>
+          <!-- Secondary Address -->
+          <div class="col-md-6">
+            <h6 class="fw-bold text-light">Branch Office</h6>
+            <p><i class="fas fa-map-marker-alt me-2"></i> Land No 27, Gram Panchayat, Banshigarhi Bhattkherwa,
+              Bahuayami Chauraha Jehta Mall Road, Near Rising Sun Millennium School,
+              Block, Thana Kakori, Pin (226102),
+              Kisan Path, Outer Ring Road, Lucknow, U.P. INDIA</p>
+            <p><i class="fas fa-phone me-2"></i> 0522-2731211, 9918422098</p>
+          </div>
+        </div>
 
-        <div class="mt-3">
+        <!-- Social Media Icons -->
+        <div class="mt-4">
           <a href="#" class="text-white me-3 fs-5"><i class="fab fa-facebook-f"></i></a>
           <a href="#" class="text-white me-3 fs-5"><i class="fab fa-twitter"></i></a>
           <a href="#" class="text-white me-3 fs-5"><i class="fab fa-instagram"></i></a>
@@ -195,11 +197,15 @@
     <!-- Footer Bottom -->
     <div class="row align-items-center">
       <div class="col text-center">
-        <p class="mb-0 text-white-50">&copy; 2025 All rights reserved by <a href="#" class="text-decoration-none text-light">kmamish.info</a></p>
+        <p class="mb-0 text-white-50">
+          &copy; 2025 All rights reserved by 
+          <a href="#" class="text-decoration-none text-light fw-semibold">kmamish.info</a>
+        </p>
       </div>
     </div>
   </div>
 </footer>
+
 
 
 <!-- Here i am add the canvas library -->
