@@ -41,6 +41,15 @@
   </div>
 </div>
 
+<!-- This is the multiple section of the various types of link -->
+ <div class="link-bar mb-2">
+    <a href="https://www.multidpublication.in/society/index.aspx" class="link-item">बहुआयामी शिक्षा तकनीकी अनुसंधान एवं समिति के आधिकारिक वेबसाइट लिंक</a>
+    <a href="https://news.multidpublication.in/" class="link-item">बहुआयामी समाचार की आधिकारिक वेबसाइट की लिंक</a>
+    <a href="https://www.bahuayamiparty.in/" class="link-item">बहुआयामी पार्टी के आधिकारिक वेबसाइटकी लिंक </a>
+    <a href="https://www.multidpublication.in/index.aspx" class="link-item">बहुआयामी प्रकाशन हाउस की आधिकारिक वेबसाइट लिंक</a>
+  </div>
+
+
 
 <!-- This is the slider image that will be slide on the home page only in mobile view -->
      <!-- Here i am going to the write the code of the crousel image -->

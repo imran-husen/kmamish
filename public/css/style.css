@@ -138,7 +138,43 @@ body{
 
     /* This is code of the crousel invention cards and many more */
     
-    
+/* This is the design of teh vorious types of the design     */
+ .link-bar {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      background-color: #800000; /* dark red strip behind all buttons */
+      padding: 8px 0;
+    }
+
+    .link-item {
+      background-color: #c62828; /* red button color */
+      color: white;
+      padding: 8px 16px;
+      margin: 4px;
+      border-radius: 4px;
+      font-size: 12px;
+      text-align: center;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      border: 1px solid #a91f1f;
+      white-space: nowrap;
+    }
+
+    .link-item:hover {
+      background-color: #a91f1f;
+      color: #fff;
+      text-decoration: none;
+      transform: translateY(-2px);
+    }
+
+    @media (max-width: 576px) {
+      .link-item {
+        width: 100%;
+        font-size: 14px;
+        border-radius: 0;
+      }
+    }
 
 /*code of the icons for whattsapp and calls */
 
@@ -1071,4 +1107,6 @@ textarea {
         left: 18px;
       }
     }
+
+
     
