@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
+use Illuminate\Support\Facades\File;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
@@ -18,6 +19,7 @@ use App\Models\movements;
 use App\Models\writing;
 use App\Models\polotics;
 use App\Models\regular_events;
+use App\Models\CopyrightPatent;
 
 
 
@@ -95,6 +97,9 @@ public function dashboard(Request $request)
                 // Semd the all details in the dashboard
                 $reg_image = regular_events::all();
 
+                // send the data on tha dashboard
+                $patent = CopyrightPatent::all();
+
                 return view('admin.dashboard', compact(
                     'joinUser',
                     'feedback',
@@ -121,7 +126,8 @@ public function dashboard(Request $request)
                     'totalwrite',
                     'polotics',
                     'totalpolotics',
-                    'reg_image'
+                    'reg_image',
+                    'patent'
                 ));
             }
         }
@@ -582,6 +588,55 @@ public function destroy_writings($id)
 
         return view('admin.success'); // Return a view or redirect
 }
+
+// I am writing the code for the opload the copyright and patent
+
+
+public function store_patent(Request $request)
+{
+      $request->validate([
+        'image' => 'required|image|mimes:jpg,jpeg,png,webp|max:2048',
+        'description' => 'required|min:10|max:2000',
+    ]);
+
+    // create folder if not exists
+    if (!file_exists(public_path('patent'))) {
+        mkdir(public_path('patent'), 0755, true);
+    }
+
+    // move image to public/patent
+    $image = $request->file('image');
+    $imageName = time() . '.' . $image->getClientOriginalExtension();
+    $image->move(public_path('patent'), $imageName);
+
+    // save relative path in DB
+    CopyrightPatent::create([
+        'image' => 'patent/' . $imageName,
+        'description' => $request->description,
+    ]);
+
+    return view('admin.success'); // Return a view or redirect
+}
+
+
+
+// This is function to distroy the patent by admin
+public function destroy_patent($id)
+{
+    $patent = CopyrightPatent::findOrFail($id);
+
+    // Delete image file from public folder
+    if ($patent->image && File::exists(public_path($patent->image))) {
+        File::delete(public_path($patent->image));
+    }
+
+    // Delete database record
+    $patent->delete();
+
+    return view('admin.success'); // or redirect()->back()
+}
+
+
 
 }
 

@@ -20,7 +20,8 @@ Route::get('/Polotical-Working-and-Achievements',[MainController::class, 'poloti
 Route::get('/Grand-Events-By-KM-Amish',[MainController::class, 'events']);
 Route::get('/Latest-Movements-By-KM-Amish',[MainController::class, 'movements']);
 Route::get('/family', [MainController::class, 'family'])->name('family');
-
+Route::get('/sizra', [MainController::class, 'sizra'])->name('sizra');
+Route::get('/patents', [MainController::class, 'patent'])->name('patents.index');
 
 
 // This is the routing of the Dynamics page of the kmamaish Sir
@@ -78,6 +79,9 @@ Route::post('/politics/store', [AdminController::class, 'store_polotics'])->name
 // Here i am writing the code for the uplod the image
 Route::post('/upload-image', [AdminController::class, 'store_regular_events'])->name('regular_events.store');
 
+//To upload the copyright and patent of the content
+Route::post('/copyright-patent/store', [AdminController::class, 'store_patent'])->name('copyright_patent.store');
+
 
 
 
@@ -93,8 +97,5 @@ Route::delete('/polotics/{id}', [AdminController::class, 'destroy_polotics'])->n
 Route::delete('/moments/{id}', [AdminController::class, 'destroy_movements'])->name('moments.destroy');
 Route::delete('/writings/{id}', [AdminController::class, 'destroy_writings'])->name('writings.destroy');
 Route::delete('/images/{id}', [AdminController::class, 'destroy_regular_events'])->name('images.destroy');
-
-
-
-
+Route::delete('/patent/delete/{id}', [AdminController::class, 'destroy_patent'])->name('delete.patent');
 

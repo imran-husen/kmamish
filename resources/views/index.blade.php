@@ -303,6 +303,47 @@
     setInterval(slideCard, 2500);
   })();
 </script>
+
+
+<!-- This is the code of the social median API -->
+<!-- Facebook SDK -->
+<div id="fb-root"></div>
+<script async defer crossorigin="anonymous"
+src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v18.0"></script>
+
+<!-- Instagram Embed Script -->
+<script async src="https://www.instagram.com/embed.js"></script>
+
+<div class="container my-4">
+    <div class="row justify-content-center">
+        <!-- Facebook Card -->
+        <div class="col-lg-6 col-md-6 col-12 mb-4 d-flex justify-content-center">
+            <div class="fb-page"
+                 data-href="https://www.facebook.com/khanmohdamish.86"
+                 data-tabs="timeline"
+                 data-width="500"
+                 data-height="600"
+                 data-adapt-container-width="true">
+            </div>
+        </div>
+
+        <!-- Instagram Card
+        <div class="col-lg-6 col-md-6 col-12 mb-4 d-flex justify-content-center">
+            <blockquote class="instagram-media"
+                        data-instgrm-permalink="https://www.instagram.com/multidimensional_party/"
+                        data-instgrm-version="14"
+                        style="background:#FFF; border:0; margin:1px; padding:0; width:100%;">
+            </blockquote>
+        </div>
+    </div>
+</div> -->
+
+
+
+
+
+
+
 <!-- Here i am creating the contacts idons to contact the km amish sir -->
   <section class="text-center mt-3">
     <h4 class="fw-bold" >Direct call, Whattsapp and E-mail</h4>
@@ -324,8 +365,6 @@
       <i class="bi bi-envelope-fill"></i>
     </a>
   </div>
-
-  
 
    </x-slot>
 </x-layout>

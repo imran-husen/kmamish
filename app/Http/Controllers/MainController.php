@@ -13,6 +13,7 @@ use App\Models\polotics;
 use App\Models\Events;
 use App\Models\movements;
 use App\Models\regular_events;
+use App\Models\CopyrightPatent;
 
 
 class MainController extends Controller
@@ -140,4 +141,17 @@ class MainController extends Controller
         return view('familybg');
     }
 
+    // This is the routing the sizra
+    public function sizra()
+    {
+        return view('sizra');
+    }
+
+
+    // This is the code copy and patent routing
+    public function patent()
+    {   
+         $patents = CopyrightPatent::latest()->get(); // collection
+         return view('patent', compact('patents'));
+    }
 }

@@ -99,6 +99,7 @@
                     <ul class="dropdown-menu">
                         <li><a class="dropdown-item" href="{{ url('/About-Us') }}">About of K.M. Amish</a></li>
                         <li><a class="dropdown-item" href="{{  route('family')  }}">Family Background</a></li>
+                        <li><a class="dropdown-item" href="{{ route('sizra') }}">Sizra</a></li>
                     </ul>
                 </li>
                 <li class="nav-item dropdown">
@@ -111,6 +112,7 @@
                          <li><a class="dropdown-item" href="{{ url('/Latest-Movements-By-KM-Amish') }}">Scientific Gadgets</a></li>
                         <li><a class="dropdown-item" href="{{ url('/Social-Working-and-Achievements')}}">Social Work and Achievements</a></li>
                         <li><a class="dropdown-item" href="{{ url('/Polotical-Working-and-Achievements')}}">Polotical Achievements</a></li>
+                        <li><a class="dropdown-item" href="{{ url('/patents')}}">Copy Right & Patent</a></li>
                     </ul>
                 </li>
                 <li class="nav-item dropdown">
@@ -148,11 +150,10 @@
       <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mb-4">
         <h5 class="text-uppercase fw-bold mb-4">Menu</h5>
         <ul class="list-unstyled">
-          <li><a href="#" class="text-decoration-none text-white-50 d-block mb-2">My Thoughts</a></li>
-          <li><a href="#" class="text-decoration-none text-white-50 d-block mb-2">My Vision</a></li>
-          <li><a href="#" class="text-decoration-none text-white-50 d-block mb-2">My Journey</a></li>
-          <li><a href="#" class="text-decoration-none text-white-50 d-block mb-2">Videos</a></li>
-          <li><a href="#" class="text-decoration-none text-white-50 d-block mb-2">Get in Touch</a></li>
+          <li><a href="{{ url('/Blogging-Page')}}" class="text-decoration-none text-white-50 d-block mb-2">My Thoughts</a></li>
+          <li><a href="{{ url('/About-Us') }}" class="text-decoration-none text-white-50 d-block mb-2">My Journey</a></li>
+          <li><a href="{{ url('/Video-Gallery')}}" class="text-decoration-none text-white-50 d-block mb-2">Videos</a></li>
+          <li><a href="{{ url('/Contact-Us') }}" class="text-decoration-none text-white-50 d-block mb-2">Get in Touch</a></li>
         </ul>
       </div>
 

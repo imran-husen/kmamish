@@ -46,7 +46,8 @@
     <a href="#" data-section="newsletter"><i class="fas fa-envelope me-2"></i> Newsletter</a>
     <a href="#" data-section="events"><i class="fas fa-calendar-alt me-2"></i> Events</a>
     <a href="#" data-section="moments"><i class="fas fa-microscope me-2"></i>Scientific Gadgets</a>
-    <a href="#" data-section="regular"><i class="fas fa-calendar-alt me-2"></i>Regular Events</a><br><br>
+    <a href="#" data-section="regular"><i class="fas fa-calendar-alt me-2"></i>Regular Events</a>
+    <a href="#" data-section="copyright"><i class="fas fa-copyright me-2"></i>Copyright & Patent</a><br><br>
   </div>
 </div>
 
@@ -916,6 +917,129 @@
     </table>
 
     </template>
+
+
+
+    <!-- This is the code feild cata of the take copya nd patent details  -->
+      <template id="copyright">
+      <h4 class="text-center text-danger fw-bold" >Copyright and Patent</h4>
+      <p class="text-center">By using the feild you can upload the copayright and Patent details here.</p>
+
+
+
+<div class="container py-1">
+    <div class="row justify-content-center">
+        <div class="col-lg-8">
+
+            <div class="card shadow-lg border-0">
+                <div class="card-header bg-primary text-white text-center">
+                    <h4 class="mb-0">Patent and Copyright Submission</h4>
+                </div>
+
+                <div class="card-body p-4">
+
+                    <form action="{{ route('copyright_patent.store') }}" 
+      method="POST" 
+      enctype="multipart/form-data"
+      class="border p-4 rounded shadow-sm bg-white">
+
+    @csrf
+
+    {{-- 🔴 Validation Errors --}}
+    @if ($errors->any())
+        <div class="alert alert-danger">
+            <ul class="mb-0">
+                @foreach ($errors->all() as $error)
+                    <li>{{ $error }}</li>
+                @endforeach
+            </ul>
+        </div>
+    @endif
+
+    <!-- Image Upload -->
+    <div class="mb-3">
+        <label class="form-label fw-semibold">Upload Image Max:1MB Image</label>
+        <input type="file" name="image" class="form-control"  required>
+    </div>
+
+    <!-- Description -->
+    <div class="mb-3">
+        <label class="form-label fw-semibold">Description</label>
+        <textarea name="description" placeholder=" Give 100 wordes description of patent"class="form-control" rows="4" required></textarea>
+    </div>
+
+    <button type="submit" class="btn btn-success w-100">
+        📤 Submit Details
+    </button>
+   </form>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<!-- This is the code of the showing databse of the using the controller -->
+<div class="container py-4">
+    <h3 class="text-center mb-4 fw-bold text-primary">
+        Patent and Copyright Submissions
+    </h3>
+
+    <div class="row">
+
+        @forelse($patent as $patent)
+            <div class="col-md-4 mb-4">
+                <div class="card record-card shadow-sm h-100">
+
+                    <!-- Patent Image -->
+                    <div class="d-flex justify-content-center">
+                       <img src="{{ asset($patent->image) }}"
+                       class="card-img-top m-2"
+                       alt="Patent Image"
+                       style="height:150px; width:150px; object-fit:cover;">
+                    </div>
+
+                    <div class="card-body d-flex flex-column">
+
+                        <!-- Description -->
+                        <p class="card-text text-center">
+                            {{ Str::limit($patent->description, 50, '...') }}
+                        </p>
+
+                        <!-- Created Date -->
+                        <small class="text-muted mb-3">
+                            📅 {{ $patent->created_at->format('d M Y') }}
+                        </small>
+
+                        <!-- Delete Button -->
+                        <form action="{{ route('delete.patent', $patent->id) }}"
+                              method="POST"
+                              class="mt-auto"
+                              onsubmit="return confirm('Are you sure you want to delete this patent?');">
+
+                            @csrf
+                            @method('DELETE')
+
+                            <button type="submit" class="btn btn-danger btn-sm w-100">
+                              🗑️ Delete
+                            </button>
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+        @empty
+            <div class="col-12">
+                <div class="alert alert-warning text-center">
+                    No patent records found.
+                </div>
+            </div>
+        @endforelse
+
+    </div>
+</div>
+
+</template>
 
 
 
